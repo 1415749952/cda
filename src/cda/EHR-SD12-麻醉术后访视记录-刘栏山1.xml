@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:mif="urn:hl7-org:v3/mif" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ..\sdschemas\CDA.xsd">
+  <realmCode code="CN"/>
+  <typeId extension="POCD_MT000040" root="2.16.840.1.113883.1.3"/>
+  <templateId root="2.16.156.10011.2.1.1.32"/>
+  <id extension="718E957D12D44005B2CC23C73E32D83F" root="2.16.156.10011.1.1"/>
+  <code code="C0012" codeSystem="2.16.156.10011.2.4" codeSystemName="卫生信息共享文档规范编码体系"/>
+  <title>麻醉术后访视记录</title>
+  <effectiveTime value="20200525092621"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="正常访问保密级别"/>
+  <languageCode code="zh-CN"/>
+  <setId/>
+  <versionNumber/>
+  <recordTarget contextControlCode="OP" typeCode="RCT">
+    <patientRole classCode="PAT">
+      <id extension="100101234567412588" root="2.16.156.10011.1.11"/>
+      <id extension="NA" root="2.16.156.10011.1.12"/>
+      <id extension="544545454548" root="2.16.156.10011.1.24"/>
+      <patient classCode="PSN" determinerCode="INSTANCE">
+        <id extension="11002119881212024D" root="2.16.156.10011.1.3"/>
+        <name>何小子</name>
+        <administrativeGenderCode code="1" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="男性"/>
+      </patient>
+      <providerOrganization classCode="ORG" determinerCode="INSTANCE">
+        <id extension="40068838-5" root="2.16.156.10011.1.5"/>
+        <name>测试医院</name>
+      </providerOrganization>
+    </patientRole>
+  </recordTarget>
+  <author contextControlCode="OP" typeCode="AUT">
+    <time value="20110404"/>
+    <assignedAuthor classCode="ASSIGNED">
+      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <assignedPerson>
+        <name>张医生</name>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <custodian typeCode="CST">
+    <assignedCustodian classCode="ASSIGNED">
+      <representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+        <id extension="WS218-2002" root="2.16.156.10011.1.5"/>
+        <name>测试医院</name>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <authenticator>
+    <time value="201210111212"/>
+    <signatureCode/>
+    <assignedEntity>
+      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <code displayName="麻醉医师"/>
+      <assignedPerson>
+        <name>张医生</name>
+      </assignedPerson>
+    </assignedEntity>
+  </authenticator>
+  <relatedDocument typeCode="RPLC">
+    <parentDocument>
+      <id/>
+      <setId/>
+      <versionNumber/>
+    </parentDocument>
+  </relatedDocument>
+  <componentOf>
+    <encompassingEncounter>
+      <effectiveTime value="20121112102325"/>
+      <location>
+        <healthCareFacility>
+          <serviceProviderOrganization>
+            <asOrganizationPartOf classCode="PART">
+              <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                <id extension="WS218-2002" root="2.16.156.10011.1.22"/>
+                <name>541</name>
+                <asOrganizationPartOf classCode="PART">
+                  <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                    <id extension="WS218-2002" root="2.16.156.10011.1.21"/>
+                    <name>856</name>
+                    <asOrganizationPartOf classCode="PART">
+                      <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                        <id extension="WS218-2002" root="2.16.156.10011.1.26"/>
+                        <name>麻醉科</name>
+                        <asOrganizationPartOf classCode="PART">
+                          <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                            <id extension="WS218-2002" root="2.16.156.10011.1.27"/>
+                            <name>二病区</name>
+                            <asOrganizationPartOf classCode="PART">
+                              <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                                <id extension="WS218-2002" root="2.16.156.10011.1.5"/>
+                                <name>测试医院</name>
+                              </wholeOrganization>
+                            </asOrganizationPartOf>
+                          </wholeOrganization>
+                        </asOrganizationPartOf>
+                      </wholeOrganization>
+                    </asOrganizationPartOf>
+                  </wholeOrganization>
+                </asOrganizationPartOf>
+              </wholeOrganization>
+            </asOrganizationPartOf>
+          </serviceProviderOrganization>
+        </healthCareFacility>
+      </location>
+    </encompassingEncounter>
+  </componentOf>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="VITAL SIGNS"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE04.10.188.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="体重"/>
+              <value unit="kg" value="68" xsi:type="PQ"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="10210-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="GENERAL STATUS"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE04.10.219.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="一般状况检查结果"/>
+              <value xsi:type="ST">一般检查结果</value>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="STUDIES SUMMARY"/>
+          <text/>
+          <entry typeCode="COMP">
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <statusCode/>
+              <component contextConductionInd="true" typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE04.50.001.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="ABO血型代码"/>
+                  <value code="1" codeSystem="2.16.156.10011.2.3.1.85" codeSystemName="ABO血型代码表" displayName="A型" xsi:type="CD"/>
+                </observation>
+              </component>
+              <component contextConductionInd="true" typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE04.50.010.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="Rh（D）血型代码"/>
+                  <value code="2" codeSystem="2.16.156.10011.2.3.1.250" codeSystemName="Rh(D)血型代码表" displayName="阳性" xsi:type="CD"/>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="10219-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Surgical operation note preoperative Dx"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE05.01.024.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="术前诊断编码"/>
+              <value code="A01.000" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" displayName="伤寒" xsi:type="CD"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="10218-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Surgical operation note postoperative Dx"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE05.01.024.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="术后诊断编码"/>
+              <value code="A01.000" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" displayName="伤寒" xsi:type="CD"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF PROCEDURES"/>
+          <text/>
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN">
+              <code code="00.3900" codeSystem="2.16.156.10011.2.3.3.12" codeSystemName="手术(操作)代码表(ICD-9-CM)" displayName="其他计算机辅助外科手术" xsi:type="CD"/>
+            </procedure>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="59774-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Procedure anesthesia"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE06.00.073.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="麻醉方法代码"/>
+              <value code="12" codeSystem="2.16.156.10011.2.3.1.159" codeSystemName="麻醉方法代码表" xsi:type="CD" displayName="静脉麻醉"/>
+              <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE06.00.227.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="麻醉适应证"/>
+                  <value xsi:type="ST">在夺在一</value>
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE06.00.225.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="麻醉恢复情况"/>
+              <value xsi:type="ST">麻醉恢复情况</value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE06.00.233.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="清醒日期时间"/>
+              <value value="20180215848454" xsi:type="TS"/>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE05.10.165.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="拔除气管插管标志"/>
+              <value value="false" xsi:type="BL"/>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE05.10.158.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="特殊情况"/>
+              <value xsi:type="ST">特殊情况</value>
+            </observation>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ../sdschemas/CDA.xsd">
+  <realmCode code="CN"/>
+  <typeId extension="POCD_MT000040" root="2.16.840.1.113883.1.3"/>
+  <templateId root="2.16.156.10011.2.1.1.50"/>
+  <id extension="A74693ADFA8E49E79373D5E14679D7B2" root="2.16.156.10011.1.1"/>
+  <code code="C0030" codeSystem="2.16.156.10011.2.4" codeSystemName="卫生信息共享文档规范编码体系"/>
+  <title>病危（重）通知书</title>
+  <effectiveTime value="20200525092340"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="正常访问保密级别"/>
+  <languageCode code="zh-CN"/>
+  <setId/>
+  <versionNumber/>
+  <recordTarget contextControlCode="OP" typeCode="RCT">
+    <patientRole>
+      <id extension="NA" root="2.16.156.10011.1.11"/>
+      <id extension="123456789" root="2.16.156.10011.1.12"/>
+      <id extension="001" root="2.16.156.10011.1.34"/>
+      <patient>
+        <id extension="1" root="2.16.156.10011.1.3"/>
+        <name>杨正新</name>
+        <administrativeGenderCode code="1" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="男性"/>
+        <birthTime value="2"/>
+        <age unit="岁" value="23"/>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author contextControlCode="OP" typeCode="AUT">
+    <time value="20190509154000"/>
+    <assignedAuthor classCode="ASSIGNED">
+      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <assignedPerson>
+        <name>医师签名</name>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <custodian typeCode="CST">
+    <assignedCustodian classCode="ASSIGNED">
+      <representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+        <id extension="40068838-5" root="2.16.156.10011.1.5"/>
+        <name>测试医院</name>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <legalAuthenticator typeCode="LA">
+    <time value="20190509154000"/>
+    <signatureCode/>
+    <assignedEntity>
+      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <assignedPerson>
+        <name>医师签名</name>
+      </assignedPerson>
+    </assignedEntity>
+  </legalAuthenticator>
+  <authenticator>
+    <time/>
+    <signatureCode/>
+    <assignedEntity>
+      <id extension="ID420106201101011919" root="2.16.156.10011.1.3"/>
+      <code displayName="患者"/>
+      <assignedPerson>
+        <name>杨正新</name>
+      </assignedPerson>
+    </assignedEntity>
+  </authenticator>
+  <authenticator>
+    <time value="20190509154000"/>
+    <signatureCode/>
+    <assignedEntity>
+      <id extension="ID420106201101011919" root="2.16.156.10011.1.3"/>
+      <code code="1" codeSystem="2.16.156.10011.2.3.3.8" codeSystemName="家庭关系代码表(GB/T 4761)" displayName="配偶"/>
+      <assignedPerson>
+        <name>法定代理人签名</name>
+      </assignedPerson>
+    </assignedEntity>
+  </authenticator>
+  <relatedDocument typeCode="RPLC">
+    <parentDocument>
+      <id/>
+      <setId/>
+      <versionNumber/>
+    </parentDocument>
+  </relatedDocument>
+  <componentOf>
+    <encompassingEncounter>
+      <effectiveTime/>
+      <location>
+        <healthCareFacility>
+          <serviceProviderOrganization>
+            <asOrganizationPartOf classCode="PART">
+              <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                <id extension="22" root="2.16.156.10011.1.22"/>
+                <asOrganizationPartOf classCode="PART">
+                  <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                    <id extension="34" root="2.16.156.10011.1.21"/>
+                    <asOrganizationPartOf classCode="PART">
+                      <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                        <id extension="001" root="2.16.156.10011.1.26"/>
+                        <name>外科</name>
+                        <asOrganizationPartOf classCode="PART">
+                          <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                            <id extension="001" root="2.16.156.10011.1.27"/>
+                            <name>第二病区</name>
+                            <asOrganizationPartOf classCode="PART">
+                              <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                                <id extension="001" root="2.16.156.10011.1.5"/>
+                                <name>测试医院</name>
+                              </wholeOrganization>
+                            </asOrganizationPartOf>
+                          </wholeOrganization>
+                        </asOrganizationPartOf>
+                      </wholeOrganization>
+                    </asOrganizationPartOf>
+                  </wholeOrganization>
+                </asOrganizationPartOf>
+              </wholeOrganization>
+            </asOrganizationPartOf>
+          </serviceProviderOrganization>
+        </healthCareFacility>
+      </location>
+    </encompassingEncounter>
+  </componentOf>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <code code="29548-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diagnosis"/>
+          <text/>
+          <entry typeCode="COMP">
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE05.01.024.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="疾病诊断编码"/>
+              <value code="A04.900" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" displayName="细菌性肠道感染" xsi:type="CD"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="34895-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="EDUCATION NOTE"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE06.00.183.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="病情概况以及主要抢救措施"/>
+              <value xsi:type="ST">病情概括及主要抢救措施</value>
+              <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE06.00.278.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="病危(重)通知内容"/>
+                  <effectiveTime value="20121101"/>
+                  <value xsi:type="ST">病危（重）通知内容</value>
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

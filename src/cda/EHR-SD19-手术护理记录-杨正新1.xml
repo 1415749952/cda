@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:mif="urn:hl7-org:v3/mif" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ..\sdschemas\CDA.xsd">
+  <realmCode code="CN"/>
+  <typeId extension="POCD_MT000040" root="2.16.840.1.113883.1.3"/>
+  <templateId root="2.16.156.10011.2.1.1.39"/>
+  <id extension="AE78293F5D854F2195AC8ADF4FD30D72" root="2.16.156.10011.1.1"/>
+  <code code="C0019" codeSystem="2.16.156.10011.2.4" codeSystemName="卫生信息共享文档规范编码体系"/>
+  <title>手术护理记录</title>
+  <effectiveTime value="20200525092315"/>
+  <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="正常访问保密级别"/>
+  <languageCode code="zh-CN"/>
+  <setId/>
+  <versionNumber/>
+  <recordTarget contextControlCode="OP" typeCode="RCT">
+    <patientRole classCode="PAT">
+      <id extension="NA" root="2.16.156.10011.1.11"/>
+      <id extension="123456789" root="2.16.156.10011.1.12"/>
+      <patient classCode="PSN" determinerCode="INSTANCE">
+        <id extension="1" root="2.16.156.10011.1.3"/>
+        <name>杨正新</name>
+        <administrativeGenderCode code="2" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="女性"/>
+        <age value="25" unit="岁"/>
+      </patient>
+      <providerOrganization>
+        <id extension="40068838-5" root="2.16.156.10011.1.5"/>
+        <name>测试医院</name>
+      </providerOrganization>
+    </patientRole>
+  </recordTarget>
+  <author contextControlCode="OP" typeCode="AUT">
+    <time value="20110404"/>
+    <assignedAuthor classCode="ASSIGNED">
+      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <code displayName="巡台护士"/>
+      <assignedPerson>
+        <name>王志新</name>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <custodian typeCode="CST">
+    <assignedCustodian classCode="ASSIGNED">
+      <representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+        <id extension="40068838-5" root="2.16.156.10011.1.5"/>
+        <name>测试医院</name>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <authenticator>
+    <time value="201210240910"/>
+    <signatureCode/>
+    <assignedEntity>
+      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <code displayName="巡台护士"/>
+      <assignedPerson>
+        <name>王护士</name>
+      </assignedPerson>
+    </assignedEntity>
+  </authenticator>
+  <authenticator>
+    <time value="201210240910"/>
+    <signatureCode/>
+    <assignedEntity>
+      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <code displayName="器械护士"/>
+      <assignedPerson>
+        <name>王机械</name>
+      </assignedPerson>
+    </assignedEntity>
+  </authenticator>
+  <authenticator>
+    <time value="201210240910"/>
+    <signatureCode/>
+    <assignedEntity>
+      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <code displayName="交接护士"/>
+      <assignedPerson>
+        <name>流花</name>
+      </assignedPerson>
+    </assignedEntity>
+  </authenticator>
+  <authenticator>
+    <time value="201210240910"/>
+    <signatureCode/>
+    <assignedEntity>
+      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <code displayName="转运者"/>
+      <assignedPerson>
+        <name>流转运</name>
+      </assignedPerson>
+    </assignedEntity>
+  </authenticator>
+  <relatedDocument typeCode="RPLC">
+    <parentDocument>
+      <id/>
+      <setId/>
+      <versionNumber/>
+    </parentDocument>
+  </relatedDocument>
+  <componentOf typeCode="COMP">
+    <encompassingEncounter classCode="ENC" moodCode="EVN">
+      <code/>
+      <effectiveTime nullFlavor="NI"/>
+      <location typeCode="LOC">
+        <healthCareFacility classCode="SDLOC">
+          <serviceProviderOrganization classCode="ORG" determinerCode="INSTANCE">
+            <asOrganizationPartOf classCode="PART">
+              <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                <id extension="001" root="2.16.156.10011.1.22"/>
+                <name>25</name>
+                <asOrganizationPartOf classCode="PART">
+                  <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                    <id extension="001" root="2.16.156.10011.1.21"/>
+                    <name>45</name>
+                    <asOrganizationPartOf classCode="PART">
+                      <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                        <id extension="001" root="2.16.156.10011.1.27"/>
+                        <name>精神科</name>
+                        <asOrganizationPartOf classCode="PART">
+                          <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
+                            <id extension="001" root="2.16.156.10011.1.26"/>
+                            <name>第二病区</name>
+                          </wholeOrganization>
+                        </asOrganizationPartOf>
+                      </wholeOrganization>
+                    </asOrganizationPartOf>
+                  </wholeOrganization>
+                </asOrganizationPartOf>
+              </wholeOrganization>
+            </asOrganizationPartOf>
+          </serviceProviderOrganization>
+        </healthCareFacility>
+      </location>
+    </encompassingEncounter>
+  </componentOf>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <code code="10219-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Surgical operation note preoperative Dx"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE05.01.024.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="术前诊断编码"/>
+              <value code="A04.900" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" xsi:type="CD" displayName="细菌性肠道感染"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="VITAL SIGNS"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE04.10.188.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="体重(kg)"/>
+              <value unit="kg" value="55.00" xsi:type="PQ"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="STUDIES SUMMARY"/>
+          <text/>
+          <entry>
+            <organizer classCode="BATTERY" moodCode="EVN">
+              <statusCode/>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE04.50.001.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+                  <value code="1" codeSystem="2.16.156.10011.2.3.1.85" codeSystemName="ABO血型代码表" displayName="A型" xsi:type="CD"/>
+                </observation>
+              </component>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE04.50.010.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+                  <value code="1" codeSystem="2.16.156.10011.2.3.1.250" codeSystemName="Rh(D)血型代码表" displayName="阴性" xsi:type="CD"/>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="29302-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="INTEGUMENTARY SYSTEM"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE04.10.126.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="皮肤检查描述"/>
+              <value xsi:type="ST">皮肤检查描述</value>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies, adverse reactions, alerts"/>
+          <text/>
+          <entry typeCode="DRIV">
+            <act classCode="ACT" moodCode="EVN">
+              <code/>
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE02.10.023.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="过敏史标志"/>
+                  <value value="true" xsi:type="BL"/>
+                  <participant typeCode="CSM">
+                    <participantRole classCode="MANU">
+                      <playingEntity classCode="MMAT">
+                        <code code="DE02.10.022.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="过敏史"/>
+                        <desc xsi:type="ST">过敏史描述</desc>
+                      </playingEntity>
+                    </participantRole>
+                  </participant>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code displayName="护理记录"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE06.00.211.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="护理等级代码"/>
+              <value code="1" codeSystem="2.16.156.10011.2.3.1.259" codeSystemName="护理等级代码表" displayName="特级护理" xsi:type="CD"/>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE06.00.212.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="护理类型代码"/>
+              <value code="1" codeSystem="2.16.156.10011.2.3.1.260" codeSystemName="护理类型代码表" displayName="基础护理" xsi:type="CD"/>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code displayName="护理观察"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE02.10.031.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="护理观察项目名称"/>
+              <value xsi:type="ST">饮食情况</value>
+              <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE02.10.028.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="护理观察结果"/>
+                  <value xsi:type="ST">护理观察结果描述</value>
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code displayName="护理操作"/>
+          <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE06.00.342.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="护理操作名称"/>
+              <value xsi:type="ST">进行护理操作的具体名称</value>
+              <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE06.00.210.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="护理操作项目类目名称"/>
+                  <value xsi:type="ST">护理操作项目类目名称描述</value>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <code code="DE06.00.209.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="护理操作结果"/>
+                      <value xsi:type="ST">护理操作结果描述</value>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code displayName="术前器械物品核对"/>
+          <text/>
+          <entry>
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <code/>
+              <statusCode code="completed"/>
+              <participant typeCode="ATND">
+                <time value="20131022080000"/>
+                <participantRole classCode="ASSIGNED">
+                  <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+                  <code displayName="巡台护士"/>
+                  <playingEntity classCode="PSN" determinerCode="INSTANCE">
+                    <name>王护士</name>
+                  </playingEntity>
+                </participantRole>
+              </participant>
+              <participant typeCode="ATND">
+                <time value="201210240910"/>
+                <participantRole classCode="ASSIGNED">
+                  <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+                  <code displayName="器械护士"/>
+                  <playingEntity classCode="PSN" determinerCode="INSTANCE">
+                    <name>王机械</name>
+                  </playingEntity>
+                </participantRole>
+              </participant>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE08.50.042.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="术中所用物品名称"/>
+                  <value xsi:type="ST">术中所用物品名称</value>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <code code="DE09.00.111.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="术前清点标志"/>
+                      <value value="false" xsi:type="BL"/>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry>
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <code/>
+              <statusCode/>
+              <participant typeCode="ATND">
+                <time value="201210240910"/>
+                <participantRole classCode="ASSIGNED">
+                  <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+                  <code displayName="巡台护士"/>
+                  <playingEntity classCode="PSN" determinerCode="INSTANCE">
+                    <name>王护士</name>
+                  </playingEntity>
+                </participantRole>
+              </participant>
+              <participant typeCode="ATND">
+                <time value="201210240910"/>
+                <participantRole classCode="ASSIGNED">
+                  <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+                  <code displayName="器械护士"/>
+                  <playingEntity classCode="PSN" determinerCode="INSTANCE">
+                    <name>王机械</name>
+                  </playingEntity>
+                </participantRole>
+              </participant>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE08.50.042.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="术中所用物品名称"/>
+                  <value xsi:type="ST">术中所用物品名称</value>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <code code="DE06.00.204.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="关前核对标志"/>
+                      <value value="false" xsi:type="BL"/>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+          <entry>
+            <organizer classCode="CLUSTER" moodCode="EVN">
+              <code/>
+              <statusCode code="completed"/>
+              <participant typeCode="ATND">
+                <time value="201210240910"/>
+                <participantRole classCode="ASSIGNED">
+                  <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+                  <code displayName="巡台护士"/>
+                  <playingEntity classCode="PSN" determinerCode="INSTANCE">
+                    <name>王护士</name>
+                  </playingEntity>
+                </participantRole>
+              </participant>
+              <participant typeCode="ATND">
+                <time value="201210240910"/>
+                <participantRole classCode="ASSIGNED">
+                  <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+                  <code displayName="器械护士"/>
+                  <playingEntity classCode="PSN" determinerCode="INSTANCE">
+                    <name>王机械</name>
+                  </playingEntity>
+                </participantRole>
+              </participant>
+              <component>
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE08.50.042.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="术中所用物品名称"/>
+                  <value xsi:type="ST">术中所用物品名称</value>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <code code="DE06.00.204.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="关后核对标志"/>
+                      <value value="false" xsi:type="BL"/>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </component>
+            </organizer>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF PROCEDURES"/>
+          <text/>
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN">
+              <code code="00.0901" codeSystem="2.16.156.10011.2.3.3.12" codeSystemName="手术(操作)代码表(ICD-9-CM)" displayName="高强度聚焦超声治疗"/>
+              <statusCode/>
+              <effectiveTime>
+                <low value="20121022080000"/>
+                <high value="20121022154823"/>
+              </effectiveTime>
+              <targetSiteCode code="脚部" codeSystem="2.16.156.10011.2.3.1.266" codeSystemName="手术目标部位编码" displayName="脚部"/>
+              <performer>
+                <assignedEntity>
+                  <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+                  <code displayName="手术操作者"/>
+                  <assignedPerson>
+                    <name>王志新</name>
+                  </assignedPerson>
+                </assignedEntity>
+              </performer>
+              <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE04.30.060.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="术中病理标志"/>
+                  <value value="true" xsi:type="BL"/>
+                </observation>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE06.00.317.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="准备事项"/>
+                  <value xsi:type="ST">针对病人实施手术的准备工作描述</value>
+                </observation>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE06.00.256.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="手术间编号"/>
+                  <value xsi:type="ST">35</value>
+                </observation>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <organizer classCode="BATTERY" moodCode="EVN">
+                  <statusCode/>
+                  <effectiveTime>
+                    <low value="20141022154823"/>
+                    <high value="20141022174823"/>
+                  </effectiveTime>
+                </organizer>
+              </entryRelationship>
+            </procedure>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <code code="8648-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Hospital Course"/>
+          <title>住院过程章节</title>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE06.00.206.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="病人交接核对项目"/>
+              <value xsi:type="ST">病人交接核对项目</value>
+              <author>
+                <time value="20161022080000"/>
+                <assignedAuthor>
+                  <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+                  <code displayName="交接护士"/>
+                  <assignedPerson>
+                    <name>流花</name>
+                  </assignedPerson>
+                </assignedAuthor>
+              </author>
+              <participant typeCode="ATND">
+                <participantRole classCode="ASSIGNED">
+                  <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+                  <code displayName="转运者"/>
+                  <playingEntity classCode="PSN" determinerCode="INSTANCE">
+                    <name>流转运</name>
+                  </playingEntity>
+                </participantRole>
+              </participant>
+            </observation>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>
