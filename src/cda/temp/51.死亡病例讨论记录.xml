@@ -43,7 +43,7 @@
   <custodian typeCode="CST">
     <assignedCustodian classCode="ASSIGNED">
       <representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
-        <id extension="4662860471" root="2.16.156.10011.1.5"/>
+        <id extension="${hospitalInfo.organCode!'NA'}" root="2.16.156.10011.1.5"/>
         <name>${hospitalInfo.organName!'NA'}</name>
       </representedCustodianOrganization>
     </assignedCustodian>
@@ -137,7 +137,7 @@
                             <name>${deathCaseDiscussionRecord.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                                <id extension="466286047" root="2.16.156.10011.1.5"/>
+                                <id extension="${hospitalInfo.organCode!'NA'}" root="2.16.156.10011.1.5"/>
                                 <name>${hospitalInfo.organName!'NA'}</name>
                               </wholeOrganization>
                             </asOrganizationPartOf>

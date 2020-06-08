@@ -85,7 +85,7 @@
                             <name>${postoperatFirstCourse.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                                <id extension="001" root="2.16.156.10011.1.5"/>
+                                <id extension="${hospitalInfo.organCode!'NA'}" root="2.16.156.10011.1.5"/>
                                 <name>${hospitalInfo.organName!'NA'}</name>
                               </wholeOrganization>
                             </asOrganizationPartOf>

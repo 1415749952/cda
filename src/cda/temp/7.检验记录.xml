@@ -40,7 +40,7 @@
   <custodian typeCode="CST">
     <assignedCustodian classCode="ASSIGNED">
       <representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
-        <id extension="WS218-2002" root="2.16.156.10011.1.5"/>
+        <id extension="${surveyRecord.organCode!'NA'}" root="2.16.156.10011.1.5"/>
         <name>${hospitalInfo.organName!'NA'}</name>
       </representedCustodianOrganization>
     </assignedCustodian>

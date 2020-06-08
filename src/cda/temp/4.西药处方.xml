@@ -26,9 +26,7 @@
         <name>${prescriptionWest.recipeOpendeptName!'NA'}</name>
         <asOrganizationPartOf>
           <wholeOrganization>
-            <#if prescriptionWest.organCode??>
             <id extension="${prescriptionWest.organCode!'NA'}" root="2.16.156.10011.1.5"/>
-            </#if>
             <name>${hospitalInfo.organName!'NA'}</name>
           </wholeOrganization>
         </asOrganizationPartOf>

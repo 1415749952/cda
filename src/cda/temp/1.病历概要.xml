@@ -43,7 +43,7 @@
         <name>${emrBasicpatient.inputName!'NA'}</name>
       </assignedPerson>
       <representedOrganization>
-        <id extension="${hospitalInfo.organCode!'NA'}" root="2.16.156.10011.1.5"/>
+        <id extension="${emrHealthevents.organCode!'NA'}" root="2.16.156.10011.1.5"/>
         <name>${hospitalInfo.organName!'NA'}</name>
       </representedOrganization>
     </assignedAuthor>
