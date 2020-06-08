@@ -1,51 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:mif="urn:hl7-org:v3/mif" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ..\sdschemas\CDA.xsd">
   <realmCode code="CN"/>
   <typeId extension="POCD_MT000040" root="2.16.840.1.113883.1.3"/>
   <templateId root="2.16.156.10011.2.1.1.24"/>
-  <id extension="7843ED84B9854DCF94C021BCFF76FCCA" root="2.16.156.10011.1.1"/>
+  <id extension="${docInfo.docId}" root="2.16.156.10011.1.1"/>
   <code code="C0004" codeSystem="2.16.156.10011.2.4" codeSystemName="卫生信息共享文档规范编码体系"/>
   <title>西药处方</title>
-  <effectiveTime value="20200525092552"/>
+  <effectiveTime value="${docInfo.effectiveTime}"/>
   <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="正常访问保密级别"/>
   <languageCode code="zh-CN"/>
   <setId/>
   <versionNumber/>
   <recordTarget contextControlCode="OP" typeCode="RCT">
     <patientRole classCode="PAT">
-      <id extension="100101234567412588" root="2.16.156.10011.1.11"/>
-      <id extension="123456" root="2.16.156.10011.1.20"/>
+      <id extension="${prescriptionWest.outpNo!'NA'}" root="2.16.156.10011.1.11"/>
+      <id extension="${prescriptionWest.recipeNo!'NA'}" root="2.16.156.10011.1.20"/>
       <patient classCode="PSN" determinerCode="INSTANCE">
-        <id extension="11002119881212024D" root="2.16.156.10011.1.3"/>
-        <name>张三四</name>
-        <administrativeGenderCode code="1" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="男性"/>
+        <id extension="${emrBasicpatient.identityNo!'NA'}" root="2.16.156.10011.1.3"/>
+        <name>${prescriptionWest.patientName!'NA'}</name>
+        <administrativeGenderCode code="${prescriptionWest.patientSex!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${prescriptionWest.patientSex!'NA'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
       </patient>
       <providerOrganization>
         <id root="2.16.156.10011.1.26"/>
-        <name>测试科</name>
+        <name>${prescriptionWest.recipeOpendeptName!'NA'}</name>
         <asOrganizationPartOf>
           <wholeOrganization>
-            <name>测试医院</name>
+            <#if prescriptionWest.organCode??>
+            <id extension="${prescriptionWest.organCode!'NA'}" root="2.16.156.10011.1.5"/>
+            </#if>
+            <name>${hospitalInfo.organName!'NA'}</name>
           </wholeOrganization>
         </asOrganizationPartOf>
       </providerOrganization>
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20190512124585"/>
+    <time value="${prescriptionWest.recipeOpenDate!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="234234234" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name>钱医生</name>
+        <name>${prescriptionWest.recipeOpendoctorName!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>
   <custodian typeCode="CST">
     <assignedCustodian classCode="ASSIGNED">
       <representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
-        <id extension="40068838-5" root="2.16.156.10011.1.5"/>
-        <name>测试医院</name>
+        <id extension="${prescriptionWest.organCode!'NA'}" root="2.16.156.10011.1.5"/>
+        <name>${hospitalInfo.organName!'NA'}</name>
       </representedCustodianOrganization>
     </assignedCustodian>
   </custodian>
@@ -56,7 +59,7 @@
       <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
       <code displayName="处方审核药剂师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
-        <name>孙医生</name>
+        <name>${prescriptionWest.checkPersonName!'NA'}</name>
       </assignedPerson>
     </assignedEntity>
   </legalAuthenticator>
@@ -67,7 +70,7 @@
       <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
       <code displayName="处方调配药剂师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
-        <name>任医生</name>
+        <name>${prescriptionWest.allocatePersonName!'NA'}</name>
       </assignedPerson>
     </assignedEntity>
   </authenticator>
@@ -78,7 +81,7 @@
       <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
       <code displayName="处方核对药剂师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
-        <name>刘医生</name>
+        <name>${prescriptionWest.verifyPersonName!'NA'}</name>
       </assignedPerson>
     </assignedEntity>
   </authenticator>
@@ -89,7 +92,7 @@
       <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
       <code displayName="处方发药药剂师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
-        <name>任医生</name>
+        <name>${prescriptionWest.dispensingPersonName!'NA'}</name>
       </assignedPerson>
     </assignedEntity>
   </authenticator>
@@ -106,6 +109,12 @@
         <section>
           <code code="29548-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diagnosis"/>
           <text/>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE05.01.024.00" displayName="诊断代码" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+              <value xsi:type="CD" code="${prescriptionWest.diagCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" displayName="<@dict_tag value="${prescriptionWest.diagCode!'NA'}" datasetCloumn="DIAG_CODE">${dict.desc}</@dict_tag>"/>
+            </observation>
+          </entry>
         </section>
       </component>
       <component>
@@ -115,38 +124,54 @@
           <entry>
             <substanceAdministration classCode="SBADM" moodCode="EVN">
               <text/>
-              <routeCode code="1" codeSystem="2.16.156.10011.2.3.1.158" codeSystemName="用药途径代码表" displayName="口服"/>
-              <doseQuantity unit="mg" value="0.01"/>
+              <routeCode code="${prescriptionWest.routeAdministration!'NA'}" codeSystem="2.16.156.10011.2.3.1.158" codeSystemName="用药途径代码表" displayName="<@dict_tag value="${prescriptionWest.routeAdministration!'NA'}" datasetCloumn="ROUTE_ADMINISTRATION">${dict.desc}</@dict_tag>"/>
+              <doseQuantity unit="mg" value="${prescriptionWest.drugDosage!'NA'}"/>
               <rateQuantity>
-                <translation code="3" displayName="NA"/>
+                <translation code="${prescriptionWest.drugUsageFrequency!'NA'}" displayName="<@dict_tag value="${prescriptionWest.drugUsageFrequency!'NA'}" datasetCloumn="DRUG_USAGE_FREQUENCY">${dict.desc}</@dict_tag>"/>
               </rateQuantity>
-              <administrationUnitCode code="01" codeSystem="2.16.156.10011.2.3.1.211" displayName="片剂(素片、压制片),浸膏片,非包衣片" codeSystemName="药物剂型代码表"/>
+              <administrationUnitCode code="${prescriptionWest.drugDosageCode!'NA'}" codeSystem="2.16.156.10011.2.3.1.211" displayName="<@dict_tag value="${prescriptionWest.drugDosageCode!'NA'}" datasetCloumn="DRUG_DOSAGE_CODE">${dict.desc}</@dict_tag>" codeSystemName="药物剂型代码表"/>
               <consumable>
                 <manufacturedProduct>
                   <manufacturedLabeledDrug>
                     <code/>
-                    <name>测试西药</name>
+                    <name>${prescriptionWest.drugName!'NA'}</name>
                   </manufacturedLabeledDrug>
                 </manufacturedProduct>
               </consumable>
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">
                   <code code="DE08.50.043.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="药物规格"/>
-                  <value xsi:type="ST">0.25g</value>
+                  <value xsi:type="ST">${prescriptionWest.drugSpec!'NA'}</value>
                 </observation>
               </entryRelationship>
+              <#if prescriptionWest.usageDosageTotal??>
+              <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <code code="DE06.00.135.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="药物使用总剂量"/>
+                  <value xsi:type="PQ" value="${prescriptionWest.usageDosageTotal!'NA'}"/>
+                </observation>
+              </entryRelationship>
+              </#if> 
             </substanceAdministration>
           </entry>
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.294.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="处方有效天数"/>
-              <value xsi:type="PQ" value="3" unit="天"/>
+              <value xsi:type="PQ" value="${prescriptionWest.recipeEffectiveDay!'NA'}" unit="天"/>
             </observation>
           </entry>
+          <#if prescriptionWest.recipeGroupNo??>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <code code="DE08.50.056.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="处方药品组号"/>
+              <value xsi:type="INT" value="${prescriptionWest.recipeGroupNo!'NA'}"/>
+            </observation>
+          </entry>
+          </#if>
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.179.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="处方备注信息"/>
-              <value xsi:type="ST">莫吃多了</value>
+              <value xsi:type="ST">${prescriptionWest.recipeRemark!'NA'}</value>
             </observation>
           </entry>
         </section>
@@ -158,7 +183,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE07.00.004.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="处方药品金额"/>
-              <value xsi:type="MO" value="500.00" currency="元"/>
+              <value xsi:type="MO" value="${prescriptionWest.recipeCostsAmount!'NA'}" currency="元"/>
             </observation>
           </entry>
         </section>
