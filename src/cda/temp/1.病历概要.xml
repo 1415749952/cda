@@ -312,7 +312,7 @@
                   <name displayName="西医诊断编码"/>
                 </qualifier>
               </code>
-              <value code="${emrHealthevents.westernDiagnosisCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" displayName="<@dict_tag value="${emrHealthevents.westernDiagnosisCode!'NA'}" datasetCloumn="WESTERN_DIAGNOSIS_CODE">${dict.desc}</@dict_tag>" xsi:type="CD"/>
+              <value code="${emrHealthevents.westernDiagnosisCode!'Z53.900'}" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" displayName="<@dict_tag value="${emrHealthevents.westernDiagnosisCode!'Z53.900'}" datasetCloumn="WESTERN_DIAGNOSIS_CODE">${dict.desc}</@dict_tag>" xsi:type="CD"/>
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">
                   <code code="DE05.10.113.00" displayName="病情转归代码" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
@@ -329,7 +329,7 @@
                   <name displayName="其他西医诊断编码"/>
                 </qualifier>
               </code>
-              <value code="${emrHealthevents.excludeMainWmDiagnosis!'NA'}" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" xsi:type="CD" displayName="<@dict_tag value="${emrHealthevents.excludeMainWmDiagnosis!'NA'}" datasetCloumn="EXCLUDE_MAIN_WM_DIAGNOSIS">${dict.desc}</@dict_tag>"/>
+              <value code="${emrHealthevents.excludeMainWmDiagnosis!'Z53.900'}" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" xsi:type="CD" displayName="<@dict_tag value="${emrHealthevents.excludeMainWmDiagnosis!'Z53.900'}" datasetCloumn="EXCLUDE_MAIN_WM_DIAGNOSIS">${dict.desc}</@dict_tag>"/>
             </observation>
           </entry>
           </#if>
@@ -367,7 +367,7 @@
           </#if>
           <entry>
             <procedure classCode="PROC" moodCode="EVN">
-              <code code="${emrHealthevents.operationCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.12" codeSystemName="手术(操作)代码表(ICD-9-CM)" displayName="<@dict_tag value="${emrHealthevents.operationCode!'NA'}" datasetCloumn="OPERATION_CODE">${dict.desc}</@dict_tag>"/>
+              <code code="${emrHealthevents.operationCode!'99.9900'}" codeSystem="2.16.156.10011.2.3.3.12" codeSystemName="手术(操作)代码表(ICD-9-CM)" displayName="<@dict_tag value="${emrHealthevents.operationCode!'99.9900'}" datasetCloumn="OPERATION_CODE">${dict.desc}</@dict_tag>"/>
             </procedure>
           </entry>
           <entry>
@@ -404,7 +404,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.01.021.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="根本死因代码"/>
-              <value code="${emrHealthevents.otherMedicalTreatment!'NA'}" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" xsi:type="CD" displayName="<@dict_tag value="${emrHealthevents.otherMedicalTreatment!'NA'}" datasetCloumn="OTHER_MEDICAL_TREATMENT">${dict.desc}</@dict_tag>"/>
+              <value code="${emrHealthevents.otherMedicalTreatment!'Z53.900'}" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" xsi:type="CD" displayName="<@dict_tag value="${emrHealthevents.otherMedicalTreatment!'Z53.900'}" datasetCloumn="OTHER_MEDICAL_TREATMENT">${dict.desc}</@dict_tag>"/>
             </observation>
           </entry>
           </#if>
