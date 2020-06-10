@@ -19,6 +19,10 @@
         <id extension="${emrBasicpatient.identityType!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${preciousConsumUsageRecord.patientName!'NA'}</name>
         <administrativeGenderCode code="${preciousConsumUsageRecord.patientSex!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${preciousConsumUsageRecord.patientSex!'NA'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
+        <#if preciousConsumUsageRecord.ageYear??>
+        <age unit="岁" value="${preciousConsumUsageRecord.ageYear!'NA'}"/>
+        </#if>
+        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
       <providerOrganization>
         <id extension="${hospitalInfo.organCode!'NA'}" root="2.16.156.10011.1.5"/>
@@ -27,9 +31,9 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404"/>
+    <time value="${preciousConsumUsageRecord.signDatetime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <code displayName="护士"/>
       <assignedPerson>
         <name>${preciousConsumUsageRecord.nurseSign!'NA'}</name>
@@ -45,10 +49,10 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="201210240910"/>
+    <time value="${preciousConsumUsageRecord.signDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="护士"/>
       <assignedPerson>
         <name>${preciousConsumUsageRecord.nurseSign!'NA'}</name>
@@ -71,19 +75,19 @@
           <serviceProviderOrganization classCode="ORG" determinerCode="INSTANCE">
             <asOrganizationPartOf classCode="PART">
               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                <id extension="001" root="2.16.156.10011.1.22"/>
+                <id extension="${preciousConsumUsageRecord.bedNo!'NA'}" root="2.16.156.10011.1.22"/>
                 <name>${preciousConsumUsageRecord.bedNo!'NA'}</name>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id extension="001" root="2.16.156.10011.1.21"/>
+                    <id extension="${preciousConsumUsageRecord.areaNo!'NA'}" root="2.16.156.10011.1.21"/>
                     <name>${preciousConsumUsageRecord.areaNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id extension="001" root="2.16.156.10011.1.27"/>
+                        <id extension="${preciousConsumUsageRecord.deptName!'NA'}" root="2.16.156.10011.1.27"/>
                         <name>${preciousConsumUsageRecord.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id extension="001" root="2.16.156.10011.1.26"/>
+                            <id extension="${preciousConsumUsageRecord.areaName!'NA'}" root="2.16.156.10011.1.26"/>
                             <name>${preciousConsumUsageRecord.areaName!'NA'}</name>
                           </wholeOrganization>
                         </asOrganizationPartOf>

@@ -27,7 +27,7 @@
   <author contextControlCode="OP" typeCode="AUT">
     <time value="${superiorDoctorWardround.wardroundsDatatime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${superiorDoctorWardround.physicianDoctorSign!'NA'}</name>
       </assignedPerson>
@@ -45,7 +45,7 @@
     <time value="${superiorDoctorWardround.signDatatime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="主任医师签名"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${superiorDoctorWardround.archiaterDoctorSign!'NA'}</name>
@@ -56,7 +56,7 @@
     <time value="${superiorDoctorWardround.signDatatime!'NA'}" xsi:type="TS"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="记录人签名"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${superiorDoctorWardround.recordSign!'NA'}</name>
@@ -67,7 +67,7 @@
     <time value="${superiorDoctorWardround.signDatatime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="主治医师签名"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${superiorDoctorWardround.physicianDoctorSign!'NA'}</name>
@@ -90,19 +90,19 @@
           <serviceProviderOrganization>
             <asOrganizationPartOf classCode="PART">
               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                <id extension="001" root="2.16.156.10011.1.22"/>
+                <id extension="${superiorDoctorWardround.bedNo!'NA'}" root="2.16.156.10011.1.22"/>
                 <name>${superiorDoctorWardround.bedNo!'NA'}</name>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id extension="001" root="2.16.156.10011.1.21"/>
+                    <id extension="${superiorDoctorWardround.roomNo!'NA'}" root="2.16.156.10011.1.21"/>
                     <name>${superiorDoctorWardround.roomNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id extension="212" root="2.16.156.10011.1.26"/>
+                        <id extension="${superiorDoctorWardround.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${superiorDoctorWardround.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id extension="001" root="2.16.156.10011.1.27"/>
+                            <id extension="${superiorDoctorWardround.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${superiorDoctorWardround.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">

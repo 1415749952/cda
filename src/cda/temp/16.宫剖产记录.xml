@@ -23,11 +23,11 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404"/>
+    <time value="${caesareanSectionRecord.operateEndTime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name>${caesareanSectionRecord.operationDoctorName!'NA'}</name>
+        <name>${caesareanSectionRecord.recordSign!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>
@@ -43,7 +43,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="手术者"/>
       <assignedPerson>
         <name>${caesareanSectionRecord.operationDoctorName!'NA'}</name>
@@ -54,7 +54,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="麻醉医师"/>
       <assignedPerson>
         <name>${caesareanSectionRecord.doctorAnes!'NA'}</name>
@@ -65,7 +65,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="器械护士"/>
       <assignedPerson>
         <name>${caesareanSectionRecord.nstrumentNurseName!'NA'}</name>
@@ -76,7 +76,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="助手"/>
       <assignedPerson>
         <name>${caesareanSectionRecord.operationAssistantName!'NA'}</name>
@@ -87,7 +87,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="护婴者"/>
       <assignedPerson>
         <name>${caesareanSectionRecord.pediatricianSign!'NA'}</name>
@@ -98,10 +98,10 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="指导者"/>
       <assignedPerson>
-        <name/>
+        <name>${caesareanSectionRecord.operationDoctorName!'NA'}</name>
       </assignedPerson>
     </assignedEntity>
   </authenticator>
@@ -109,10 +109,10 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="记录人"/>
       <assignedPerson>
-        <name/>
+        <name>${caesareanSectionRecord.recordSign!'NA'}</name>
       </assignedPerson>
     </assignedEntity>
   </authenticator>
@@ -147,11 +147,11 @@
                     <name>${caesareanSectionRecord.areaNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id root="2.16.156.10011.1.26"/>
+                        <id extension="${caesareanSectionRecord.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${caesareanSectionRecord.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id root="2.16.156.10011.1.27"/>
+                            <id extension="${caesareanSectionRecord.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${caesareanSectionRecord.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
@@ -296,7 +296,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE04.30.056.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="脐带扭转（周）"/>
-              <value unit="周" value="22" xsi:type="PQ"/>
+              <value unit="周" value="0" xsi:type="PQ"/>
             </observation>
           </entry>
           <entry>

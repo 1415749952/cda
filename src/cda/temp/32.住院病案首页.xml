@@ -94,7 +94,7 @@
   <author contextControlCode="OP" typeCode="AUT">
     <time/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${inpatientMedicalRecord.physicianDoctorSign!'NA'}</name>
       </assignedPerson>
@@ -112,7 +112,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="科主任"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${inpatientMedicalRecord.deptDirectorSign!'NA'}</name>
@@ -123,7 +123,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="主任(副主任)医师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${inpatientMedicalRecord.directorSign!'NA'}</name>
@@ -134,7 +134,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="主治医师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${inpatientMedicalRecord.physicianDoctorSign!'NA'}</name>
@@ -145,7 +145,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="住院医师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${inpatientMedicalRecord.inpDoctorSign!'NA'}</name>
@@ -156,7 +156,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="责任护士"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${inpatientMedicalRecord.dutyNurseSign!'NA'}</name>
@@ -167,7 +167,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="进修医师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${inpatientMedicalRecord.inpDoctorSign!'NA'}</name>
@@ -178,7 +178,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="实习医师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${inpatientMedicalRecord.internshipDoctorSign!'NA'}</name>
@@ -189,7 +189,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="编码员"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${inpatientMedicalRecord.coderSign!'NA'}</name>
@@ -233,11 +233,11 @@
           <serviceProviderOrganization classCode="ORG" determinerCode="INSTANCE">
             <asOrganizationPartOf classCode="PART">
               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                <id extension="001" root="2.16.156.10011.1.21"/>
+                <id extension="${inpatientMedicalRecord.inpRoom!'NA'}" root="2.16.156.10011.1.21"/>
                 <name>${inpatientMedicalRecord.inpRoom!'NA'}</name>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id extension="001" root="2.16.156.10011.1.26"/>
+                    <id extension="${inpatientMedicalRecord.inpDeptName!'NA'}" root="2.16.156.10011.1.26"/>
                     <name>${inpatientMedicalRecord.inpDeptName!'NA'}</name>
                   </wholeOrganization>
                 </asOrganizationPartOf>
@@ -340,7 +340,7 @@
           <entry typeCode="COMP">
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.10.119.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="住院者疾病状态代码"/>
-              <value code="1" codeSystem="2.16.156.10011.2.3.1.100" codeSystemName="住院者疾病状态代码表" xsi:type="CD"/>
+              <value code="9" codeSystem="2.16.156.10011.2.3.1.100" codeSystemName="住院者疾病状态代码表" displayName="其他" xsi:type="CD"/>
             </observation>
           </entry>
           <entry typeCode="COMP">
@@ -703,7 +703,7 @@
               <author>
                 <time/>
                 <assignedAuthor>
-                  <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+                  <id extension="NA" root="2.16.156.10011.1.4"/>
                   <code displayName="质控医生"/>
                   <assignedPerson>
                     <name>${inpatientMedicalRecord.qcDoctorSignature!'NA'}</name>
@@ -713,7 +713,7 @@
               <author>
                 <time/>
                 <assignedAuthor>
-                  <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+                  <id extension="NA" root="2.16.156.10011.1.4"/>
                   <code displayName="质控护士"/>
                   <assignedPerson>
                     <name>${inpatientMedicalRecord.qcNurseSignature!'NA'}</name>

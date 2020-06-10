@@ -24,11 +24,11 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404"/>
+    <time value="${deathRecord.signDatatime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name>${deathRecord.physicianDoctorSign!'NA'}</name>
+        <name>${deathRecord.archiaterDoctorSign!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>
@@ -44,7 +44,7 @@
     <time value="${deathRecord.signDatatime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="住院医师"/>
       <assignedPerson>
         <name>${deathRecord.archiaterDoctorSign!'NA'}</name>
@@ -55,7 +55,7 @@
     <time value="${deathRecord.signDatatime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="主治医师"/>
       <assignedPerson>
         <name>${deathRecord.archiaterDoctorSign!'NA'}</name>
@@ -66,7 +66,7 @@
     <time value="${deathRecord.signDatatime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="主任医师"/>
       <assignedPerson>
         <name>${deathRecord.inpDoctorSign!'NA'}</name>
@@ -92,15 +92,15 @@
                 <name/>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id root="2.16.156.10011.1.21"/>
+                    <id extension="${deathRecord.roomNo!'NA'}" root="2.16.156.10011.1.21"/>
                     <name>${deathRecord.roomNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id root="2.16.156.10011.1.26"/>
+                        <id extension="${deathRecord.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${deathRecord.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id root="2.16.156.10011.1.27"/>
+                            <id extension="${deathRecord.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${deathRecord.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">

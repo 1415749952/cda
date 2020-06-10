@@ -27,7 +27,7 @@
   <author contextControlCode="OP" typeCode="AUT">
     <time value="${firstCourseRecord.recordDatatime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${firstCourseRecord.inpDoctorSign!'NA'}</name>
       </assignedPerson>
@@ -45,7 +45,7 @@
     <time value="${firstCourseRecord.recordDatatime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="上级医师签名"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${firstCourseRecord.inpDoctorSign!'NA'}</name>
@@ -56,7 +56,7 @@
     <time value="${firstCourseRecord.recordDatatime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="住院医师签名"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${firstCourseRecord.inpDoctorSign!'NA'}</name>
@@ -78,19 +78,19 @@
           <serviceProviderOrganization>
             <asOrganizationPartOf classCode="PART">
               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                <id extension="001" root="2.16.156.10011.1.22"/>
+                <id extension="${firstCourseRecord.bedNo!'NA'}" root="2.16.156.10011.1.22"/>
                 <name>${firstCourseRecord.bedNo!'NA'}</name>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id extension="001" root="2.16.156.10011.1.21"/>
+                    <id extension="${firstCourseRecord.roomNo!'NA'}" root="2.16.156.10011.1.21"/>
                     <name>${firstCourseRecord.roomNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id extension="212" root="2.16.156.10011.1.26"/>
+                        <id extension="${firstCourseRecord.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${firstCourseRecord.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id root="2.16.156.10011.1.27"/>
+                            <id extension="${firstCourseRecord.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${firstCourseRecord.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">

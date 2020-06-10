@@ -23,11 +23,11 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404"/>
+    <time value="${vbncRecord.postpartumObservationTime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name>${vbncRecord.operationDoctorName!'NA'}</name>
+        <name>${vbncRecord.recordSign!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>
@@ -43,7 +43,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="接生者"/>
       <assignedPerson>
         <name>${vbncRecord.midwivesSign!'NA'}</name>
@@ -54,10 +54,10 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="助产者"/>
       <assignedPerson>
-        <name/>
+        <name>${vbncRecord.midwivesSign!'NA'}</name>
       </assignedPerson>
     </assignedEntity>
   </authenticator>
@@ -65,10 +65,10 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="助手"/>
       <assignedPerson>
-        <name/>
+        <name>${vbncRecord.midwivesSign!'NA'}</name>
       </assignedPerson>
     </assignedEntity>
   </authenticator>
@@ -76,10 +76,10 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="护婴者"/>
       <assignedPerson>
-        <name/>
+        <name>${vbncRecord.pediatricianSign!'NA'}</name>
       </assignedPerson>
     </assignedEntity>
   </authenticator>
@@ -87,10 +87,10 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="指导者"/>
       <assignedPerson>
-        <name/>
+        <name>${vbncRecord.operationDoctorName!'NA'}</name>
       </assignedPerson>
     </assignedEntity>
   </authenticator>
@@ -98,7 +98,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="记录人"/>
       <assignedPerson>
         <name>${vbncRecord.recordSign!'NA'}</name>
@@ -136,11 +136,11 @@
                     <name>${vbncRecord.areaNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id root="2.16.156.10011.1.26"/>
+                        <id extension="${vbncRecord.areaName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${vbncRecord.areaName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id root="2.16.156.10011.1.27"/>
+                            <id extension="${vbncRecord.deptName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${vbncRecord.deptName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">

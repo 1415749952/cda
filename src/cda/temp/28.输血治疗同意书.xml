@@ -21,14 +21,17 @@
         <id extension="${emrBasicpatient.identityType!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${transfusionInformedConsent.patientName!'NA'}</name>
         <administrativeGenderCode code="${transfusionInformedConsent.sexCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${transfusionInformedConsent.sexCode!'NA'}" datasetCloumn="SEX_CODE">${dict.desc}</@dict_tag>"/>
+        <#if emrBasicpatient.ageYear??>
+        <age unit="岁" value="${emrBasicpatient.ageYear!'NA'}"/>
+        </#if>
         <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404" xsi:type="TS"/>
+    <time value="${transfusionInformedConsent.doctorSignDatetime!'NA'}" xsi:type="TS"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${transfusionInformedConsent.doctorSign!'NA'}</name>
       </assignedPerson>
@@ -46,7 +49,7 @@
     <time value="${transfusionInformedConsent.doctorSignDatetime!'NA'}"/>
     <signatureCode code="s"/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <assignedPerson>
         <name>${transfusionInformedConsent.doctorSign!'NA'}</name>
       </assignedPerson>
@@ -56,7 +59,7 @@
     <time value="${transfusionInformedConsent.signDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="ID420106201101011919" root="2.16.156.10011.1.3"/>
+      <id extension="NA" root="2.16.156.10011.1.3"/>
       <assignedPerson>
         <name>${transfusionInformedConsent.patientName!'NA'}</name>
       </assignedPerson>
@@ -66,7 +69,7 @@
     <time value="${transfusionInformedConsent.signDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="420106201101011919" root="2.16.156.10011.1.3"/>
+      <id extension="NA" root="2.16.156.10011.1.3"/>
       <code code="${transfusionInformedConsent.relationCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.8" codeSystemName="家庭关系代码表(GB/T 4761)" displayName="<@dict_tag value="${transfusionInformedConsent.relationCode!'NA'}" datasetCloumn="RELATION_CODE">${dict.desc}</@dict_tag>"/>
       <assignedPerson>
         <name>${transfusionInformedConsent.patientAgentSign!'NA'}</name>
@@ -171,7 +174,7 @@
                   <consumable>
                     <manufacturedProduct>
                       <manufacturedMaterial>
-                        <code code="11" codeSystem="2.16.156.10011.2.3.1.251" codeSystemName="输血品种代码表" displayName="浓缩红细胞"/>
+                        <code code="${transfusionInformedConsent.bloodTransfusionVarietyCode!'NA'}" codeSystem="2.16.156.10011.2.3.1.251" codeSystemName="输血品种代码表" displayName="displayName="<@dict_tag value="${transfusionInformedConsent.bloodTransfusionVarietyCode!'NA'}" datasetCloumn="BLOOD_TRANSFUSION_VARIETY_CODE">${dict.desc}</@dict_tag>""/>
                       </manufacturedMaterial>
                     </manufacturedProduct>
                   </consumable>

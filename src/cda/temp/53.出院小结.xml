@@ -44,11 +44,11 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404" xsi:type="TS"/>
+    <time value="${dischargeAbstract.signDatetime!'NA'}" xsi:type="TS"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name/>
+        <name>${dischargeAbstract.superiorDoctorSign!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>
@@ -64,7 +64,7 @@
     <time value="${dischargeAbstract.signDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="YS001" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="住院医师"/>
       <assignedPerson>
         <name>${dischargeAbstract.inpDoctorSign!'NA'}</name>
@@ -75,7 +75,7 @@
     <time value="${dischargeAbstract.signDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity classCode="ASSIGNED">
-      <id extension="YS002" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="上级医师"/>
       <assignedPerson classCode="PSN">
         <name>${dischargeAbstract.superiorDoctorSign!'NA'}</name>
@@ -108,19 +108,19 @@
           <serviceProviderOrganization>
             <asOrganizationPartOf classCode="PART">
               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                <id extension="001" root="2.16.156.10011.1.22"/>
+                <id extension="${dischargeAbstract.bedNum!'NA'}" root="2.16.156.10011.1.22"/>
                 <name>${dischargeAbstract.bedNum!'NA'}</name>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id extension="001" root="2.16.156.10011.1.21"/>
+                    <id extension="${dischargeAbstract.wardNum!'NA'}" root="2.16.156.10011.1.21"/>
                     <name>${dischargeAbstract.wardNum!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id extension="001" root="2.16.156.10011.1.26"/>
+                        <id extension="${dischargeAbstract.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${dischargeAbstract.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id extension="001" root="2.16.156.10011.1.27"/>
+                            <id extension="${dischargeAbstract.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${dischargeAbstract.areaName!'NA'}</name>
                           </wholeOrganization>
                         </asOrganizationPartOf>

@@ -24,9 +24,9 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404"/>
+    <time value="${postoperatFirstCourse.signDatatime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${postoperatFirstCourse.doctorSign!'NA'}</name>
       </assignedPerson>
@@ -44,7 +44,7 @@
     <time value="${postoperatFirstCourse.signDatatime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code code="医师"/>
       <assignedPerson>
         <name>${postoperatFirstCourse.doctorSign!'NA'}</name>

@@ -24,9 +24,9 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404"/>
+    <time value="${dischargeRecord.signDatatime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${dischargeRecord.archiaterDoctorSign!'NA'}</name>
       </assignedPerson>
@@ -88,19 +88,19 @@
           <serviceProviderOrganization>
             <asOrganizationPartOf classCode="PART">
               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                <id extension="001" root="2.16.156.10011.1.22"/>
+                <id extension="${dischargeRecord.bedNo!'NA'}" root="2.16.156.10011.1.22"/>
                 <name>${dischargeRecord.bedNo!'NA'}</name>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id extension="001" root="2.16.156.10011.1.21"/>
+                    <id extension="${dischargeRecord.roomNo!'NA'}" root="2.16.156.10011.1.21"/>
                     <name>${dischargeRecord.roomNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id extension="001" root="2.16.156.10011.1.26"/>
+                        <id extension="${dischargeRecord.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${dischargeRecord.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id extension="001" root="2.16.156.10011.1.27"/>
+                            <id extension="${dischargeRecord.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${dischargeRecord.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">

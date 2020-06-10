@@ -20,7 +20,11 @@
         <id extension="${emrBasicpatient.identityNo!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${prescriptionWest.patientName!'NA'}</name>
         <administrativeGenderCode code="${prescriptionWest.patientSex!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${prescriptionWest.patientSex!'NA'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
-      </patient>
+        <#if prescriptionWest.ageYear??>
+        <age unit="岁" value="${prescriptionWest.ageYear!'NA'}"/>
+        </#if>
+        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
+    </patient>
       <providerOrganization>
         <id root="2.16.156.10011.1.26"/>
         <name>${prescriptionWest.recipeOpendeptName!'NA'}</name>
@@ -36,7 +40,7 @@
   <author contextControlCode="OP" typeCode="AUT">
     <time value="${prescriptionWest.recipeOpenDate!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${prescriptionWest.recipeOpendoctorName!'NA'}</name>
       </assignedPerson>
@@ -54,7 +58,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="处方审核药剂师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${prescriptionWest.checkPersonName!'NA'}</name>
@@ -65,7 +69,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="处方调配药剂师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${prescriptionWest.allocatePersonName!'NA'}</name>
@@ -76,7 +80,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="处方核对药剂师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${prescriptionWest.verifyPersonName!'NA'}</name>
@@ -87,7 +91,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="处方发药药剂师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${prescriptionWest.dispensingPersonName!'NA'}</name>

@@ -29,15 +29,19 @@
         <administrativeGenderCode code="${hours24AdmissionDeathRecord.patientSex!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${hours24AdmissionDeathRecord.patientSex!'NA'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
         <maritalStatusCode code="${hours24AdmissionDeathRecord.maritalStatusCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.5" codeSystemName="婚姻状况代码表(GB/T 2261.2)" displayName="<@dict_tag value="${hours24AdmissionDeathRecord.maritalStatusCode!'NA'}" datasetCloumn="MARITAL_STATUS_CODE">${dict.desc}</@dict_tag>"/>
         <ethnicGroupCode code="${hours24AdmissionDeathRecord.nation!'NA'}" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)" displayName="<@dict_tag value="${hours24AdmissionDeathRecord.nation!'NA'}" datasetCloumn="NATION">${dict.desc}</@dict_tag>"/>
+        <#if hours24AdmissionDeathRecord.ageYear??>
+        <age unit="岁" value="${hours24AdmissionDeathRecord.ageYear!'NA'}"/>
+        </#if>
+        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
     <time value="${hours24AdmissionDeathRecord.inpDate!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name/>
+        <name>${hours24AdmissionDeathRecord.receiveDoctorSign!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>
@@ -62,7 +66,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="001" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="主任医师"/>
       <assignedPerson>
         <name>${hours24AdmissionDeathRecord.archiaterDoctorSign!'NA'}</name>
@@ -73,7 +77,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="002" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="接诊医师"/>
       <assignedPerson>
         <name>${hours24AdmissionDeathRecord.receiveDoctorSign!'NA'}</name>
@@ -84,7 +88,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="003" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="住院医师"/>
       <assignedPerson>
         <name>${hours24AdmissionDeathRecord.inpDoctorSign!'NA'}</name>
@@ -95,7 +99,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="004" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="主治医师"/>
       <assignedPerson>
         <name>${hours24AdmissionDeathRecord.physicianDoctorSign!'NA'}</name>
@@ -104,15 +108,16 @@
   </authenticator>
   <relatedDocument typeCode="RPLC">
     <parentDocument classCode="DOCCLIN" moodCode="EVN">
-      <id extension="D2011000000" root="2.16.156.10011.1.1.2"/>
+      <id/>
       <setId/>
-      <versionNumber value="1"/>
+      <versionNumber/>
     </parentDocument>
   </relatedDocument>
   <componentOf>
     <encompassingEncounter>
       <effectiveTime>
         <low value="${hours24AdmissionDeathRecord.inpDate!'NA'}"/>
+        <high value="${hours24AdmissionDeathRecord.deathDate!'NA'}"/>
       </effectiveTime>
     </encompassingEncounter>
   </componentOf>

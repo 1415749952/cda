@@ -21,15 +21,19 @@
         <id extension="${emrBasicpatient.identityNo!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${transfusionRecord.patientName!'NA'}</name>
         <administrativeGenderCode code="${transfusionRecord.patientSex!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${transfusionRecord.patientSex!'NA'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
+        <#if transfusionRecord.ageYear??>
+        <age unit="岁" value="${transfusionRecord.ageYear!'NA'}"/>
+        </#if>
+        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20190225"/>
+    <time value="${transfusionRecord.signDatetime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name/>
+        <name>${transfusionRecord.doctorNameSign!'NA'}</name>>
       </assignedPerson>
     </assignedAuthor>
   </author>
@@ -45,7 +49,7 @@
     <time value="${transfusionRecord.signDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="医师"/>
       <assignedPerson>
         <name>${transfusionRecord.doctorNameSign!'NA'}</name>
@@ -67,19 +71,19 @@
           <serviceProviderOrganization>
             <asOrganizationPartOf classCode="PART">
               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                <id extension="001" root="2.16.156.10011.1.22"/>
+                <id extension="${transfusionRecord.bedNo!'NA'}" root="2.16.156.10011.1.22"/>
                 <name>${transfusionRecord.bedNo!'NA'}</name>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id extension="001" root="2.16.156.10011.1.21"/>
+                    <id extension="${transfusionRecord.areaNo!'NA'}" root="2.16.156.10011.1.21"/>
                     <name>${transfusionRecord.areaNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id extension="001" root="2.16.156.10011.1.26"/>
+                        <id extension="${transfusionRecord.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${transfusionRecord.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id extension="001" root="2.16.156.10011.1.27"/>
+                            <id extension="${transfusionRecord.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${transfusionRecord.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">

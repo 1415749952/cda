@@ -29,6 +29,7 @@
         <name>${inspectionRecord.patientName!'NA'}</name>
         <administrativeGenderCode code="${inspectionRecord.patientSex!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${inspectionRecord.patientSex!'NA'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
         <age unit="岁" value="${inspectionRecord.ageYear!'NA'}"/>
+        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>
@@ -53,7 +54,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="审核医师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${inspectionRecord.reportaudit!'NA'}</name>
@@ -64,7 +65,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="检查技师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${inspectionRecord.inspectEngineerName!'NA'}</name>
@@ -75,7 +76,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="检查医师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${inspectionRecord.examinationDoctor!'NA'}</name>
@@ -86,7 +87,7 @@
     <time/>
     <associatedEntity classCode="ASSIGNED">
       <scopingOrganization>
-        <id extension="001" root="2.16.156.10011.1.26"/>
+        <id extension="${inspectionRecord.examinationApplyRoom!'NA'}" root="2.16.156.10011.1.26"/>
         <name>${inspectionRecord.examinationApplyRoom!'NA'}</name>
         <asOrganizationPartOf>
           <wholeOrganization>
@@ -120,16 +121,16 @@
                     <name>${inspectionRecord.roomNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id root="2.16.156.10011.1.26"/>
+                        <id extension="${inspectionRecord.areaName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${inspectionRecord.areaName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id root="2.16.156.10011.1.27"/>
+                            <id extension="${inspectionRecord.deptName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${inspectionRecord.deptName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                                <id extension="001" root="2.16.156.10011.1.5"/>
-                                <name>${inspectionRecord.organCode!'NA'}</name>
+                                <id extension="${inspectionRecord.organCode!'NA'}" root="2.16.156.10011.1.5"/>
+                                <name>${hospitalInfo.organName!'NA'}</name>
                               </wholeOrganization>
                             </asOrganizationPartOf>
                           </wholeOrganization>

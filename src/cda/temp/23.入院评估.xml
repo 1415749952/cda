@@ -27,6 +27,7 @@
         <ethnicGroupCode code="${admissionAssessment.nation!'NA'}" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)" displayName="<@dict_tag value="${admissionAssessment.nation!'NA'}" datasetCloumn="NATION">${dict.desc}</@dict_tag>"/>
         <nationality code="${admissionAssessment.nationnality!'NA'}" codeSystem="2.16.156.10011.2.3.3.1" codeSystemName="世界各国和地区名称代码(GB/T 2659)" displayName="<@dict_tag value="${admissionAssessment.nationnality!'NA'}" datasetCloumn="NATIONNALITY">${dict.desc}</@dict_tag>"/>
         <age unit="岁" value="${admissionAssessment.ageYear!'NA'}"/>
+        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
         <educationLevel>
           <educationLevelCode code="${admissionAssessment.degreeCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.6" codeSystemName="学历代码表(GB/T 4658)" displayName="<@dict_tag value="${admissionAssessment.degreeCode!'NA'}" datasetCloumn="DEGREE_CODE">${dict.desc}</@dict_tag>"/>
         </educationLevel>
@@ -37,11 +38,11 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404"/>
+    <time value="${admissionAssessment.signDatetime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name/>
+        <name>${admissionAssessment.nursingSign!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>
@@ -57,7 +58,7 @@
     <time value="${admissionAssessment.signDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="责任护士工号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="责任护士"/>
       <assignedPerson>
         <name>${admissionAssessment.nursingSign!'NA'}</name>
@@ -68,7 +69,7 @@
     <time value="${admissionAssessment.signDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity classCode="ASSIGNED">
-      <id extension="dh777777" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="接诊护士"/>
       <assignedPerson classCode="PSN">
         <name>${admissionAssessment.nursingSign!'NA'}</name>
@@ -77,7 +78,7 @@
   </authenticator>
   <participant typeCode="NOT">
     <associatedEntity classCode="ECON">
-      <code code="1" codeSystem="2.16.156.10011.2.3.3.8" codeSystemName="家庭关系代码表(GB/T4761)" displayName="配偶"/>
+      <code/>
       <telecom value="${admissionAssessment.contactsPhone!'NA'}"/>
       <associatedPerson>
         <name>${admissionAssessment.contactsName!'NA'}</name>
@@ -166,7 +167,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE04.01.118.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="主要症状名称"/>
-              <value xsi:type="ST"/>
+              <value xsi:type="ST">${admissionAssessment.symptomptom!'NA'}</value>>
             </observation>
           </entry>
         </section>
@@ -190,7 +191,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE04.10.081.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="呼吸频率"/>
-              <value unit="次/min" value="83" xsi:type="PQ"/>
+              <value unit="次/min" value="${admissionAssessment.breathFrequency!'NA'}" xsi:type="PQ"/>
             </observation>
           </entry>
           <entry>

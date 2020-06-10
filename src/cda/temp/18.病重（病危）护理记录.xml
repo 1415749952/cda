@@ -27,9 +27,9 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404"/>
+    <time value="${worsePatientCareRecord.signDatetime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <code displayName="护士"/>
       <assignedPerson>
         <name>${worsePatientCareRecord.nurseSign!'NA'}</name>
@@ -45,7 +45,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="201210240910"/>
+    <time value="${worsePatientCareRecord.signDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
@@ -71,19 +71,19 @@
           <serviceProviderOrganization classCode="ORG" determinerCode="INSTANCE">
             <asOrganizationPartOf classCode="PART">
               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                <id extension="001" root="2.16.156.10011.1.22"/>
+                <id extension="${worsePatientCareRecord.bedNo!'NA'}" root="2.16.156.10011.1.22"/>
                 <name>${worsePatientCareRecord.bedNo!'NA'}</name>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id extension="001" root="2.16.156.10011.1.21"/>
+                    <id extension="${worsePatientCareRecord.areaNo!'NA'}" root="2.16.156.10011.1.21"/>
                     <name>${worsePatientCareRecord.areaNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id extension="001" root="2.16.156.10011.1.27"/>
+                        <id extension="${worsePatientCareRecord.deptName!'NA'}" root="2.16.156.10011.1.27"/>
                         <name>${worsePatientCareRecord.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id extension="001" root="2.16.156.10011.1.26"/>
+                            <id extension="${worsePatientCareRecord.areaName!'NA'}" root="2.16.156.10011.1.26"/>
                             <name>${worsePatientCareRecord.areaName!'NA'}</name>
                           </wholeOrganization>
                         </asOrganizationPartOf>

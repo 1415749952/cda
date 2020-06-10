@@ -27,10 +27,10 @@
   <author contextControlCode="OP" typeCode="AUT">
     <time value="${handoverRecord.handoverDatatime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <code displayName="文档创作者"/>
       <assignedPerson>
-        <name/>
+        <name>"${handoverRecord.handoverSign!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>
@@ -46,7 +46,7 @@
     <time value="${handoverRecord.handoverDatatime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="交班者"/>
       <assignedPerson>
         <name>${handoverRecord.handoverSign!'NA'}</name>
@@ -57,7 +57,7 @@
     <time value="${handoverRecord.takeDatatime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="接班者"/>
       <assignedPerson>
         <name>${handoverRecord.takeSign!'NA'}</name>
@@ -80,19 +80,19 @@
           <serviceProviderOrganization>
             <asOrganizationPartOf classCode="PART">
               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                <id extension="001" root="2.16.156.10011.1.22"/>
+                <id extension="${handoverRecord.bedNo!'NA'}" root="2.16.156.10011.1.22"/>
                 <name>${handoverRecord.bedNo!'NA'}</name>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id extension="001" root="2.16.156.10011.1.21"/>
+                    <id extension="${handoverRecord.roomNo!'NA'}" root="2.16.156.10011.1.21"/>
                     <name>${handoverRecord.roomNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id extension="212" root="2.16.156.10011.1.26"/>
+                        <id extension="${handoverRecord.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${handoverRecord.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id extension="001" root="2.16.156.10011.1.27"/>
+                            <id extension="${handoverRecord.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${handoverRecord.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">

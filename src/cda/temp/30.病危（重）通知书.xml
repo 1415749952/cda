@@ -21,15 +21,15 @@
         <id extension="${emrBasicpatient.identityType!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${criticallyIllNotice.patientName!'NA'}</name>
         <administrativeGenderCode code="${criticallyIllNotice.sexCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${criticallyIllNotice.sexCode!'NA'}" datasetCloumn="SEX_CODE">${dict.desc}</@dict_tag>"/>
-        <birthTime value="${criticallyIllNotice.patientMonth!'NA'}"/>
+        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
         <age unit="岁" value="${criticallyIllNotice.ageYear!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${criticallyIllNotice.criticalIllnessDatetime!'NA'}"/>
+    <time value="${criticallyIllNotice.doctorSignDatetime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${criticallyIllNotice.doctorSign!'NA'}</name>
       </assignedPerson>
@@ -47,7 +47,7 @@
     <time value="${criticallyIllNotice.doctorSignDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <assignedPerson>
         <name>${criticallyIllNotice.doctorSign!'NA'}</name>
       </assignedPerson>
@@ -57,7 +57,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="ID420106201101011919" root="2.16.156.10011.1.3"/>
+      <id extension="NA" root="2.16.156.10011.1.3"/>
       <code displayName="患者"/>
       <assignedPerson>
         <name>${criticallyIllNotice.patientName!'NA'}</name>
@@ -96,11 +96,11 @@
                     <id extension="${criticallyIllNotice.areaNo!'NA'}" root="2.16.156.10011.1.21"/>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id extension="001" root="2.16.156.10011.1.26"/>
+                        <id extension="${criticallyIllNotice.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${criticallyIllNotice.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id extension="001" root="2.16.156.10011.1.27"/>
+                            <id extension="${criticallyIllNotice.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${criticallyIllNotice.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
@@ -146,7 +146,7 @@
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">
                   <code code="DE06.00.278.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="病危(重)通知内容"/>
-                  <effectiveTime value="20121101"/>
+                  <effectiveTime value="${criticallyIllNotice.criticalIllnessDatetime!'NA'}"/>
                   <value xsi:type="ST">${criticallyIllNotice.criticalIllnessContent!'NA'}</value>
                 </observation>
               </entryRelationship>

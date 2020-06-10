@@ -25,9 +25,9 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404123423"/>
+    <time value="${phaseSummary.signDatatime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${phaseSummary.doctorSign!'NA'}</name>
       </assignedPerson>
@@ -45,7 +45,7 @@
     <time value="${phaseSummary.signDatatime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="医师签名"/>
       <assignedPerson>
         <name>${phaseSummary.doctorSign!'NA'}</name>
@@ -74,19 +74,19 @@
           <serviceProviderOrganization>
             <asOrganizationPartOf classCode="PART">
               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                <id extension="001" root="2.16.156.10011.1.22"/>
+                <id extension="${phaseSummary.bedNo!'NA'}" root="2.16.156.10011.1.22"/>
                 <name>${phaseSummary.bedNo!'NA'}</name>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id extension="001" root="2.16.156.10011.1.21"/>
+                    <id extension="${phaseSummary.roomNo!'NA'}" root="2.16.156.10011.1.21"/>
                     <name>${phaseSummary.roomNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id extension="212" root="2.16.156.10011.1.26"/>
+                        <id extension="${phaseSummary.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${phaseSummary.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id extension="001" root="2.16.156.10011.1.27"/>
+                            <id extension="${phaseSummary.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${phaseSummary.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">

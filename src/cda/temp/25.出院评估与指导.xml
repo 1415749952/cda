@@ -21,6 +21,7 @@
         <name>${dischargeAssessment.patientName!'NA'}</name>
         <administrativeGenderCode code="${dischargeAssessment.sexCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${dischargeAssessment.sexCode!'NA'}" datasetCloumn="SEX_CODE">${dict.desc}</@dict_tag>"/>
         <age unit="岁" value="${dischargeAssessment.ageYear!'NA'}"/>
+        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
       <providerOrganization>
         <asOrganizationPartOf classCode="PART">
@@ -57,9 +58,9 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404"/>
+    <time value="${dischargeAssessment.signDatetime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${dischargeAssessment.nursingSign!'NA'}</name>
       </assignedPerson>
@@ -74,10 +75,10 @@
     </assignedCustodian>
   </custodian>
   <authenticator typeCode="AUTHEN">
-    <time value="20121110192930"/>
+    <time value="${dischargeAssessment.signDatetime!'NA'}"/>
     <signatureCode code="S"/>
     <assignedEntity classCode="ASSIGNED">
-      <id extension="dh777777" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <assignedPerson classCode="PSN">
         <name>${dischargeAssessment.nursingSign!'NA'}</name>
       </assignedPerson>

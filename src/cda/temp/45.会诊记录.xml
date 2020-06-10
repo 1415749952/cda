@@ -21,15 +21,16 @@
         <name>${consultationRecord.patientName!'NA'}</name>
         <administrativeGenderCode code="${consultationRecord.sexCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${consultationRecord.sexCode!'NA'}" datasetCloumn="SEX_CODE">${dict.desc}</@dict_tag>"/>
         <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
+        <age unit="岁" value="${consultationRecord.ageYear!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404"/>
+    <time value="${consultationRecord.consultationDatatime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name>${consultationRecord.patientName!'NA'}</name>
+        <name>${consultationRecord.consultationDoctorSign!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>
@@ -45,7 +46,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="会诊申请医师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${consultationRecord.applyDoctorName!'NA'}</name>
@@ -56,7 +57,7 @@
     <time value="${consultationRecord.consultationDatatime!'NA'}" xsi:type="TS"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编码" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="会诊医师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${consultationRecord.consultationDoctorSign!'NA'}</name>
@@ -75,11 +76,11 @@
       <representedOrganization>
         <asOrganizationPartOf>
           <wholeOrganization>
-            <id extension="申请会诊科室" root="2.16.156.10011.1.26"/>
+            <id extension="${consultationRecord.applyDeptName!'NA'}" root="2.16.156.10011.1.26"/>
             <name>${consultationRecord.applyDeptName!'NA'}</name>
             <asOrganizationPartOf>
               <wholeOrganization>
-                <id extension="会诊申请医疗机构名称" root="2.16.156.10011.1.5"/>
+                <id extension="${consultationRecord.applyOrgName!'NA'}" root="2.16.156.10011.1.5"/>
                 <name>${consultationRecord.applyOrgName!'NA'}</name>
               </wholeOrganization>
             </asOrganizationPartOf>
@@ -97,11 +98,11 @@
       <representedOrganization>
         <asOrganizationPartOf>
           <wholeOrganization>
-            <id extension="会诊科室名称" root="2.16.156.10011.1.26"/>
+            <id extension="${consultationRecord.consultationDeptName!'NA'}" root="2.16.156.10011.1.26"/>
             <name>${consultationRecord.consultationDeptName!'NA'}</name>
             <asOrganizationPartOf>
               <wholeOrganization>
-                <id extension="会诊所在医疗机构名称" root="2.16.156.10011.1.5"/>
+                <id extension="${consultationRecord.consultationOrgname!'NA'}" root="2.16.156.10011.1.5"/>
                 <name>${consultationRecord.consultationOrgname!'NA'}</name>
               </wholeOrganization>
             </asOrganizationPartOf>
@@ -119,7 +120,7 @@
   </relatedDocument>
   <componentOf>
     <encompassingEncounter>
-      <effectiveTime value="201201011212" xsi:type="IVL_TS"/>
+      <effectiveTime value="${consultationRecord.consultationDatatime!'NA'}" xsi:type="IVL_TS"/>
       <location>
         <healthCareFacility>
           <serviceProviderOrganization classCode="ORG" determinerCode="INSTANCE">

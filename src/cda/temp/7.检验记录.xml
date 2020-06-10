@@ -25,13 +25,14 @@
         <name>${surveyRecord.patientName!'NA'}</name>
         <administrativeGenderCode code="${surveyRecord.patientSex!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${surveyRecord.patientSex!'NA'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
         <age unit="岁" value="${surveyRecord.ageYear!'NA'}"/>
+        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
     <time value="${surveyRecord.inspectionReportDate!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${surveyRecord.inspectionDoctor!'NA'}</name>
       </assignedPerson>
@@ -49,7 +50,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="审核医师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${surveyRecord.reportaudit!'NA'}</name>
@@ -60,7 +61,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="检验技师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${surveyRecord.inspectionEngineer!'NA'}</name>
@@ -71,7 +72,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="检查验医师"/>
       <assignedPerson classCode="PSN" determinerCode="INSTANCE">
         <name>${surveyRecord.inspectionDoctor!'NA'}</name>
@@ -82,11 +83,11 @@
     <time/>
     <associatedEntity classCode="ASSIGNED">
       <scopingOrganization>
-        <id extension="001" root="2.16.156.10011.1.26"/>
+        <id extension="${surveyRecord.examinationApplyRoom!'NA'}" root="2.16.156.10011.1.26"/>
         <name>${surveyRecord.examinationApplyRoom!'NA'}</name>
         <asOrganizationPartOf>
           <wholeOrganization>
-            <id extension="WS218-2002" root="2.16.156.10011.1.5"/>
+            <id extension="${surveyRecord.organCode!'NA'}" root="2.16.156.10011.1.5"/>
             <name>${surveyRecord.examinationApplyOrgan!'NA'}</name>
           </wholeOrganization>
         </asOrganizationPartOf>
@@ -116,11 +117,11 @@
                     <name>${surveyRecord.roomNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id root="2.16.156.10011.1.26"/>
+                        <id extension="${surveyRecord.areaName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${surveyRecord.areaName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id root="2.16.156.10011.1.27"/>
+                            <id extension="${surveyRecord.deptName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${surveyRecord.deptName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">

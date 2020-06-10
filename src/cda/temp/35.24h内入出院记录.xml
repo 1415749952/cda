@@ -39,11 +39,11 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${h24AdmissionDischargeRecord.inpDate!'NA'}"/>
+    <time value="${h24AdmissionDischargeRecord.outhosAdvicOpenDate!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name/>
+        <name>${h24AdmissionDischargeRecord.outhosAdvicOpenerSig!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>
@@ -70,7 +70,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="001" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="主任医师"/>
       <assignedPerson>
         <name>${h24AdmissionDischargeRecord.archiaterDoctorSign!'NA'}</name>
@@ -81,7 +81,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="002" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="接诊医师"/>
       <assignedPerson>
         <name>${h24AdmissionDischargeRecord.receiveDoctorSign!'NA'}</name>
@@ -92,7 +92,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="003" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="住院医师"/>
       <assignedPerson>
         <name>${h24AdmissionDischargeRecord.inpDoctorSign!'NA'}</name>
@@ -103,7 +103,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="004" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="主治医师"/>
       <assignedPerson>
         <name>${h24AdmissionDischargeRecord.physicianDoctorSign!'NA'}</name>
@@ -121,7 +121,7 @@
     <encompassingEncounter>
       <effectiveTime>
         <low value="${h24AdmissionDischargeRecord.inpDate!'NA'}"/>
-        <high value="${h24AdmissionDischargeRecord.inpDate!'NA'}"/>
+        <high value="${h24AdmissionDischargeRecord.dishospitalDatetime!'NA'}"/>
       </effectiveTime>
     </encompassingEncounter>
   </componentOf>

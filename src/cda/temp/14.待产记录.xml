@@ -23,11 +23,11 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20110404"/>
+    <time value="${expectantRecord.deliveryDatetime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="234234234" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name/>
+        <name>${expectantRecord.recordSign!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>
@@ -40,10 +40,10 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="20121010"/>
+    <time value="${expectantRecord.deliveryDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="产程检查者"/>
       <assignedPerson>
         <name>${expectantRecord.laborInspectionSig!'NA'}</name>
@@ -51,10 +51,10 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="20121010"/>
+    <time value="${expectantRecord.deliveryDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="记录人"/>
       <assignedPerson>
         <name>${expectantRecord.recordSign!'NA'}</name>
@@ -92,11 +92,11 @@
                     <name>${expectantRecord.areaNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id root="2.16.156.10011.1.26"/>
+                        <id extension="${expectantRecord.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${expectantRecord.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id root="2.16.156.10011.1.27"/>
+                            <id extension="${expectantRecord.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${expectantRecord.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
@@ -299,7 +299,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE04.10.247.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="出口横径（cm）"/>
-              <value unit="cm" value="60" xsi:type="PQ"/>
+              <value unit="cm" value="9" xsi:type="PQ"/>
             </observation>
           </entry>
           <entry>

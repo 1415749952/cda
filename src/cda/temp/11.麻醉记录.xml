@@ -21,13 +21,17 @@
         <id extension="${emrBasicpatient.identityNo!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${anesthesiaRecords.patientName!'NA'}</name>
         <administrativeGenderCode code="${anesthesiaRecords.patientSex!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${anesthesiaRecords.patientSex!'NA'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
+        <#if anesthesiaRecords.ageYear??>
+        <age unit="岁" value="${anesthesiaRecords.ageYear!'NA'}"/>
+        </#if>
+        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="20180512"/>
+    <time value="${anesthesiaRecords.signDatetime!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${anesthesiaRecords.anesthesiaDoctorSign!'NA'}</name>
       </assignedPerson>
@@ -45,7 +49,7 @@
     <time value="${anesthesiaRecords.signDatetime!'NA'}"/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="麻醉医师"/>
       <assignedPerson>
         <name>${anesthesiaRecords.anesthesiaDoctorSign!'NA'}</name>
@@ -61,30 +65,30 @@
   </relatedDocument>
   <componentOf>
     <encompassingEncounter>
-      <effectiveTime value="20121112102325"/>
+      <effectiveTime value="${anesthesiaRecords.operationBeginDatetime!'NA'}"/>
       <location>
         <healthCareFacility>
           <serviceProviderOrganization>
             <asOrganizationPartOf classCode="PART">
               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                <id extension="001" root="2.16.156.10011.1.22"/>
+                <id extension="${anesthesiaRecords.bedNo!'NA'}" root="2.16.156.10011.1.22"/>
                 <name>${anesthesiaRecords.bedNo!'NA'}</name>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id extension="001" root="2.16.156.10011.1.21"/>
+                    <id extension="${anesthesiaRecords.areaNo!'NA'}" root="2.16.156.10011.1.21"/>
                     <name>${anesthesiaRecords.areaNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id extension="001" root="2.16.156.10011.1.26"/>
+                        <id extension="${anesthesiaRecords.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${anesthesiaRecords.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id extension="001" root="2.16.156.10011.1.27"/>
+                            <id extension="${anesthesiaRecords.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${anesthesiaRecords.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                                <id extension="001" root="2.16.156.10011.1.5"/>
-                                <name>医院名</name>
+                                <id extension="${hospitalInfo.organCode!'NA'}" root="2.16.156.10011.1.5"/>
+                                <name>${hospitalInfo.organName!'NA'}</name>
                               </wholeOrganization>
                             </asOrganizationPartOf>
                           </wholeOrganization>
@@ -160,7 +164,7 @@
           <entry>
             <substanceAdministration classCode="SBADM" moodCode="EVN">
               <text/>
-              <routeCode code="1" codeSystem="2.16.156.10011.2.3.1.158" codeSystemName="用药途径代码表" displayName="口服"/>
+              <routeCode code="${anesthesiaRecords.routeAdministration!'NA'}" codeSystem="2.16.156.10011.2.3.1.158" codeSystemName="用药途径代码表" displayName="<@dict_tag value="${anesthesiaRecords.routeAdministration!'NA'}" datasetCloumn="ROUTE_ADMINISTRATION">${dict.desc}</@dict_tag>"/>
               <doseQuantity unit="${anesthesiaRecords.routeAdministration!'NA'}" value="${anesthesiaRecords.drugUsageDosage!'NA'}"/>
               <consumable>
                 <manufacturedProduct>

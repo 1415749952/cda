@@ -31,14 +31,15 @@
         <#if admissionRecord.nation??>
         <ethnicGroupCode code="${admissionRecord.nation!'NA'}" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)" displayName="<@dict_tag value="${admissionRecord.nation!'NA'}" datasetCloumn="NATION">${dict.desc}</@dict_tag>"/>
         </#if>
-        <age value="${admissionRecord.ageYear!'NA'}"/>
+        <age unit="岁" value="${admissionRecord.ageYear!'NA'}"/>
+        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
     <time value="${admissionRecord.inpDate!'NA'}" xsi:type="TS"/>
     <assignedAuthor classCode="ASSIGNED">
-      <id extension="234234234" root="2.16.156.10011.1.7"/>
+      <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
         <name>${admissionRecord.physicianDoctorSign!'NA'}</name>
       </assignedPerson>
@@ -46,7 +47,7 @@
   </author>
   <informant>
     <assignedEntity>
-      <id extension="身份证号码" root="2.16.156.10011.1.3"/>
+      <id extension="NA" root="2.16.156.10011.1.3"/>
       <#if admissionRecord.presenterPatientRelatCode??>
       <code code="${admissionRecord.presenterPatientRelatCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.8" codeSystemName="家庭关系代码表(GB/T 4761)" displayName="<@dict_tag value="${admissionRecord.presenterPatientRelatCode!'NA'}" datasetCloumn="PRESENTER_PATIENT_RELAT_CODE">${dict.desc}</@dict_tag>"/>
       </#if>
@@ -67,7 +68,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="001" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="主任医师"/>
       <assignedPerson>
         <name>${admissionRecord.archiaterDoctorSign!'NA'}</name>
@@ -78,7 +79,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="002" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="接诊医师"/>
       <assignedPerson>
         <name>${admissionRecord.receiveDoctorSign!'NA'}</name>
@@ -89,7 +90,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="003" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="住院医师"/>
       <assignedPerson>
         <name>${admissionRecord.inpDoctorSign!'NA'}</name>
@@ -100,7 +101,7 @@
     <time/>
     <signatureCode/>
     <assignedEntity>
-      <id extension="004" root="2.16.156.10011.1.4"/>
+      <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="主治医师"/>
       <assignedPerson>
         <name>${admissionRecord.physicianDoctorSign!'NA'}</name>
@@ -122,19 +123,19 @@
           <serviceProviderOrganization>
             <asOrganizationPartOf classCode="PART">
               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                <id extension="001" root="2.16.156.10011.1.22"/>
+                <id extension="${admissionRecord.bedNo!'NA'}" root="2.16.156.10011.1.22"/>
                 <name>${admissionRecord.bedNo!'NA'}</name>
                 <asOrganizationPartOf classCode="PART">
                   <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                    <id extension="001" root="2.16.156.10011.1.21"/>
+                    <id extension="${admissionRecord.roomNo!'NA'}" root="2.16.156.10011.1.21"/>
                     <name>${admissionRecord.roomNo!'NA'}</name>
                     <asOrganizationPartOf classCode="PART">
                       <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                        <id extension="001" root="2.16.156.10011.1.26"/>
+                        <id extension="${admissionRecord.deptName!'NA'}" root="2.16.156.10011.1.26"/>
                         <name>${admissionRecord.deptName!'NA'}</name>
                         <asOrganizationPartOf classCode="PART">
                           <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
-                            <id extension="001" root="2.16.156.10011.1.27"/>
+                            <id extension="${admissionRecord.areaName!'NA'}" root="2.16.156.10011.1.27"/>
                             <name>${admissionRecord.areaName!'NA'}</name>
                             <asOrganizationPartOf classCode="PART">
                               <wholeOrganization classCode="ORG" determinerCode="INSTANCE">
@@ -380,7 +381,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE04.10.263.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="胸部检查结果"/>
-              <value xsi:type="ST"/>
+              <value xsi:type="ST">${admissionRecord.chestCheckResult!'NA'}</value>
             </observation>
           </entry>
           <entry>
@@ -452,7 +453,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.01.025.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="初步诊断-西医诊断名称"/>
-              <effectiveTime value="20070531"/>
+              <effectiveTime value="${admissionRecord.preliminaryDiagnosisTodayDesc!'NA'}"/>
               <value xsi:type="ST">${admissionRecord.inpWmDiagname!'NA'}</value>
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">
