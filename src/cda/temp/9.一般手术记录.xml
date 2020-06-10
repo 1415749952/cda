@@ -33,7 +33,7 @@
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name>${generalOperationRecords.operationDoctorSign!'NA'}<name/>
+        <name>${generalOperationRecords.operationDoctorSign!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>

@@ -174,7 +174,7 @@
                   <consumable>
                     <manufacturedProduct>
                       <manufacturedMaterial>
-                        <code code="${transfusionInformedConsent.bloodTransfusionVarietyCode!'NA'}" codeSystem="2.16.156.10011.2.3.1.251" codeSystemName="输血品种代码表" displayName="displayName="<@dict_tag value="${transfusionInformedConsent.bloodTransfusionVarietyCode!'NA'}" datasetCloumn="BLOOD_TRANSFUSION_VARIETY_CODE">${dict.desc}</@dict_tag>""/>
+                        <code code="${transfusionInformedConsent.bloodTransfusionVarietyCode!'NA'}" codeSystem="2.16.156.10011.2.3.1.251" codeSystemName="输血品种代码表" displayName="<@dict_tag value="${transfusionInformedConsent.bloodTransfusionVarietyCode!'NA'}" datasetCloumn="BLOOD_TRANSFUSION_VARIETY_CODE">${dict.desc}</@dict_tag>"/>
                       </manufacturedMaterial>
                     </manufacturedProduct>
                   </consumable>

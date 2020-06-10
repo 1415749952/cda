@@ -16,7 +16,7 @@
     <patientRole classCode="PAT">
       <id extension="${emergencyMedicalRecords.outpNo!'NA'}" root="2.16.156.10011.1.11"/>
       <id extension="${emergencyMedicalRecords.applyNo!'NA'}" root="2.16.156.10011.1.24"/>
-      <telecom value=${hospitalInfo.organNumber!'NA'}"/>
+      <telecom value="${hospitalInfo.organNumber!'NA'}"/>
       <patient classCode="PSN" determinerCode="INSTANCE">
         <id extension="${emrBasicpatient.identityNo!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${emergencyMedicalRecords.patientName!'NA'}</name>
@@ -310,7 +310,7 @@
                   <participant typeCode="ATND">
                     <time value="${emergencyMedicalRecords.checkAdviceDatetime!'NA'}"/>
                     <participantRole classCode="ASSIGNED">
-                      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+                      <id extension="NA" root="2.16.156.10011.1.4"/>
                       <code displayName="医嘱审核人"/>
                       <playingEntity classCode="PSN" determinerCode="INSTANCE">
                         <name>${emergencyMedicalRecords.checkPersonSign!'NA'}</name>
@@ -320,7 +320,7 @@
                   <participant typeCode="ATND">
                     <time value="${emergencyMedicalRecords.cancelAdviceDatetime!'NA'}"/>
                     <participantRole classCode="ASSIGNED">
-                      <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
+                      <id extension="NA" root="2.16.156.10011.1.4"/>
                       <code displayName="医嘱取消人"/>
                       <playingEntity classCode="PSN" determinerCode="INSTANCE">
                         <name>${emergencyMedicalRecords.cancelPersonSign!'NA'}</name>
