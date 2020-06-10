@@ -29,7 +29,7 @@
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name>${transferenceRecord.overintoDeptSign!'NA'}</name>>
+        <name>${transferenceRecord.overintoDeptSign!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>
