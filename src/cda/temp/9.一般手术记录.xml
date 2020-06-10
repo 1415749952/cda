@@ -24,7 +24,6 @@
         <#if generalOperationRecords.ageYear??>
         <age unit="岁" value="${generalOperationRecords.ageYear!'NA'}"/>
         </#if>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
     </patient>
     </patientRole>
   </recordTarget>

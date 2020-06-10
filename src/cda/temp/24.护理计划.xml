@@ -23,7 +23,6 @@
         <#if carePlan.ageYear??>
         <age unit="岁" value="${carePlan.ageYear!'NA'}"/>
         </#if>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
       <providerOrganization>
         <asOrganizationPartOf classCode="PART">

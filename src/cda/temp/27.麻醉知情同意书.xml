@@ -24,7 +24,6 @@
         <#if cseInformedConsent.ageYear??>
         <age unit="岁" value="${cseInformedConsent.ageYear!'NA'}"/>
         </#if>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>

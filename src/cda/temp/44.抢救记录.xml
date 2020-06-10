@@ -74,7 +74,7 @@
   <componentOf>
     <encompassingEncounter>
       <code displayName="入院日期时间"/>
-      <effectiveTime value=">${salvageRecrod.salvageBeginDatatime!'NA'}" xsi:type="IVL_TS"/>
+      <effectiveTime value="${salvageRecrod.salvageBeginDatatime!'NA'}" xsi:type="IVL_TS"/>
       <location>
         <healthCareFacility>
           <serviceProviderOrganization>

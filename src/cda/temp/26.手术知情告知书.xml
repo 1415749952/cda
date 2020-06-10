@@ -24,7 +24,6 @@
         <#if operationInformedConsent.ageYear??>
         <age unit="岁" value="${operationInformedConsent.ageYear!'NA'}"/>
         </#if>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>

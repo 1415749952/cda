@@ -24,7 +24,6 @@
         <#if visitsRecBefAnesthesia.ageYear??>
         <age unit="岁" value="${visitsRecBefAnesthesia.ageYear!'NA'}"/>
         </#if>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>

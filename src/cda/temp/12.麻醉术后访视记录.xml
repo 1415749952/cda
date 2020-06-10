@@ -24,7 +24,6 @@
         <#if visitsRecAftAnesthesia.ageYear??>
         <age unit="岁" value="${visitsRecAftAnesthesia.ageYear!'NA'}"/>
         </#if>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
       <providerOrganization classCode="ORG" determinerCode="INSTANCE">
         <id extension="${hospitalInfo.organCode!'NA'}" root="2.16.156.10011.1.5"/>

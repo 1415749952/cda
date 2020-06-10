@@ -32,7 +32,6 @@
         <#if hours24AdmissionDeathRecord.ageYear??>
         <age unit="岁" value="${hours24AdmissionDeathRecord.ageYear!'NA'}"/>
         </#if>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>

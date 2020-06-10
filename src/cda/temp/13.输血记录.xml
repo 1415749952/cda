@@ -24,7 +24,6 @@
         <#if transfusionRecord.ageYear??>
         <age unit="岁" value="${transfusionRecord.ageYear!'NA'}"/>
         </#if>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>
@@ -33,7 +32,7 @@
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
-        <name>${transfusionRecord.doctorNameSign!'NA'}</name>>
+        <name>${transfusionRecord.doctorNameSign!'NA'}</name>
       </assignedPerson>
     </assignedAuthor>
   </author>

@@ -23,7 +23,6 @@
         <#if prescriptionWest.ageYear??>
         <age unit="岁" value="${prescriptionWest.ageYear!'NA'}"/>
         </#if>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
     </patient>
       <providerOrganization>
         <id root="2.16.156.10011.1.26"/>

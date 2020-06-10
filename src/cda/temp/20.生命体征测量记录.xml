@@ -22,7 +22,6 @@
         <#if monitorVitalSignsRecord.ageYear??>
         <age unit="岁" value="${monitorVitalSignsRecord.ageYear!'NA'}"/>
         </#if>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
       <providerOrganization>
         <id extension="${hospitalInfo.organCode!'NA'}" root="2.16.156.10011.1.5"/>

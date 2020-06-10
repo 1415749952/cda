@@ -23,7 +23,6 @@
         <#if prescriptionChine.ageYear??>
         <age unit="岁" value="${prescriptionChine.ageYear!'NA'}"/>
         </#if>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
     </patient>
       <providerOrganization>
         <id root="2.16.156.10011.1.26"/>

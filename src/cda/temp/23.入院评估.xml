@@ -27,7 +27,6 @@
         <ethnicGroupCode code="${admissionAssessment.nation!'NA'}" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)" displayName="<@dict_tag value="${admissionAssessment.nation!'NA'}" datasetCloumn="NATION">${dict.desc}</@dict_tag>"/>
         <nationality code="${admissionAssessment.nationnality!'NA'}" codeSystem="2.16.156.10011.2.3.3.1" codeSystemName="世界各国和地区名称代码(GB/T 2659)" displayName="<@dict_tag value="${admissionAssessment.nationnality!'NA'}" datasetCloumn="NATIONNALITY">${dict.desc}</@dict_tag>"/>
         <age unit="岁" value="${admissionAssessment.ageYear!'NA'}"/>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
         <educationLevel>
           <educationLevelCode code="${admissionAssessment.degreeCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.6" codeSystemName="学历代码表(GB/T 4658)" displayName="<@dict_tag value="${admissionAssessment.degreeCode!'NA'}" datasetCloumn="DEGREE_CODE">${dict.desc}</@dict_tag>"/>
         </educationLevel>
@@ -167,7 +166,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE04.01.118.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="主要症状名称"/>
-              <value xsi:type="ST">${admissionAssessment.symptomptom!'NA'}</value>>
+              <value xsi:type="ST">${admissionAssessment.symptomptom!'NA'}</value>
             </observation>
           </entry>
         </section>

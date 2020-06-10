@@ -32,7 +32,6 @@
         <ethnicGroupCode code="${admissionRecord.nation!'NA'}" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)" displayName="<@dict_tag value="${admissionRecord.nation!'NA'}" datasetCloumn="NATION">${dict.desc}</@dict_tag>"/>
         </#if>
         <age unit="岁" value="${admissionRecord.ageYear!'NA'}"/>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
     </patientRole>
   </recordTarget>
@@ -447,7 +446,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.10.143.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="陈述内容可靠标志"/>
-              <value value="${admissionRecord.isCredible!'NA'}" xsi:type="BL"/>
+              <value value="${admissionRecord.isCredible!'true'}" xsi:type="BL"/>
             </observation>
           </entry>
           <entry>

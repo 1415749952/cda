@@ -48,7 +48,7 @@
       <id extension="NA" root="2.16.156.10011.1.4"/>
       <code displayName="转出医师签名"/>
       <assignedPerson>
-        <name>${transferenceRecord.turnoutDoctorSign!'NA'}</name>
+        <name/>
       </assignedPerson>
     </assignedEntity>
   </authenticator>

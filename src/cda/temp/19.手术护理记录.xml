@@ -21,7 +21,6 @@
         <name>${operationCareRecord.patientName!'NA'}</name>
         <administrativeGenderCode code="${operationCareRecord.patientSex!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${operationCareRecord.patientSex!'NA'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
         <age value="${operationCareRecord.ageYear!'NA'}" unit="岁"/>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
       </patient>
       <providerOrganization>
         <id extension="${hospitalInfo.organCode!'NA'}" root="2.16.156.10011.1.5"/>
