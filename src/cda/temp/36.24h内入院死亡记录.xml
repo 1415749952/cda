@@ -31,6 +31,8 @@
         <ethnicGroupCode code="${hours24AdmissionDeathRecord.nation!'NA'}" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)" displayName="<@dict_tag value="${hours24AdmissionDeathRecord.nation!'NA'}" datasetCloumn="NATION">${dict.desc}</@dict_tag>"/>
         <#if hours24AdmissionDeathRecord.ageYear??>
         <age unit="岁" value="${hours24AdmissionDeathRecord.ageYear!'NA'}"/>
+        <#else>
+        <age unit="月" value="${hours24AdmissionDeathRecord.patientMonth!'NA'}"/>
         </#if>
       </patient>
     </patientRole>

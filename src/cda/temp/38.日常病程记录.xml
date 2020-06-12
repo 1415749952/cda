@@ -20,7 +20,11 @@
         <name>${dailyCourseRecord.patientName!'NA'}</name>
         <administrativeGenderCode code="${dailyCourseRecord.sexCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${dailyCourseRecord.sexCode!'NA'}" datasetCloumn="SEX_CODE">${dict.desc}</@dict_tag>"/>
         <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
-        <age value="${dailyCourseRecord.ageYear!'NA'}"/>
+        <#if dailyCourseRecord.ageYear??>
+        <age unit="岁" value="${dailyCourseRecord.ageYear!'NA'}"/>
+        <#else>
+        <age unit="月" value="${dailyCourseRecord.patientMonth!'NA'}"/>
+        </#if>
       </patient>
     </patientRole>
   </recordTarget>

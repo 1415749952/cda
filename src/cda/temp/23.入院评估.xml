@@ -26,7 +26,11 @@
         <maritalStatusCode code="${admissionAssessment.maritalStatusCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.5" codeSystemName="婚姻状况代码表(GB/T 2261.2)" displayName="<@dict_tag value="${admissionAssessment.maritalStatusCode!'NA'}" datasetCloumn="MARITAL_STATUS_CODE">${dict.desc}</@dict_tag>"/>
         <ethnicGroupCode code="${admissionAssessment.nation!'NA'}" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)" displayName="<@dict_tag value="${admissionAssessment.nation!'NA'}" datasetCloumn="NATION">${dict.desc}</@dict_tag>"/>
         <nationality code="${admissionAssessment.nationnality!'NA'}" codeSystem="2.16.156.10011.2.3.3.1" codeSystemName="世界各国和地区名称代码(GB/T 2659)" displayName="<@dict_tag value="${admissionAssessment.nationnality!'NA'}" datasetCloumn="NATIONNALITY">${dict.desc}</@dict_tag>"/>
+        <#if admissionAssessment.ageYear??>
         <age unit="岁" value="${admissionAssessment.ageYear!'NA'}"/>
+        <#else>
+        <age unit="月" value="${admissionAssessment.patientMonth!'NA'}"/>
+        </#if>
         <educationLevel>
           <educationLevelCode code="${admissionAssessment.degreeCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.6" codeSystemName="学历代码表(GB/T 4658)" displayName="<@dict_tag value="${admissionAssessment.degreeCode!'NA'}" datasetCloumn="DEGREE_CODE">${dict.desc}</@dict_tag>"/>
         </educationLevel>

@@ -22,7 +22,11 @@
         <name>${criticallyIllNotice.patientName!'NA'}</name>
         <administrativeGenderCode code="${criticallyIllNotice.sexCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${criticallyIllNotice.sexCode!'NA'}" datasetCloumn="SEX_CODE">${dict.desc}</@dict_tag>"/>
         <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
+        <#if criticallyIllNotice.ageYear??>
         <age unit="岁" value="${criticallyIllNotice.ageYear!'NA'}"/>
+        <#else>
+        <age unit="月" value="${criticallyIllNotice.patientMonth!'NA'}"/>
+        </#if>
       </patient>
     </patientRole>
   </recordTarget>

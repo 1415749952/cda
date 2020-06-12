@@ -46,7 +46,11 @@
           </place>
         </birthplace>
         <nationality code="${cnInpatientMedicalRecord.nationnalityCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.1" codeSystemName="世界各国和地区名称代码(GB/T2659)" displayName="<@dict_tag value="${cnInpatientMedicalRecord.nationnalityCode!'NA'}" datasetCloumn="NATIONNALITY_CODE">${dict.desc}</@dict_tag>"/>
+        <#if cnInpatientMedicalRecord.ageYear??>
         <age unit="岁" value="${cnInpatientMedicalRecord.ageYear!'NA'}"/>
+        <#else>
+        <age unit="月" value="${cnInpatientMedicalRecord.patientMonth!'NA'}"/>
+        </#if>
         <employerOrganization>
           <name>${cnInpatientMedicalRecord.workunitName!'NA'}</name>
           <telecom value="${cnInpatientMedicalRecord.workunitPhone!'NA'}"/>

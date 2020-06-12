@@ -31,7 +31,11 @@
         <#if admissionRecord.nation??>
         <ethnicGroupCode code="${admissionRecord.nation!'NA'}" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)" displayName="<@dict_tag value="${admissionRecord.nation!'NA'}" datasetCloumn="NATION">${dict.desc}</@dict_tag>"/>
         </#if>
+        <#if admissionRecord.ageYear??>
         <age unit="岁" value="${admissionRecord.ageYear!'NA'}"/>
+        <#else>
+        <age unit="月" value="${admissionRecord.patientMonth!'NA'}"/>
+        </#if>
       </patient>
     </patientRole>
   </recordTarget>

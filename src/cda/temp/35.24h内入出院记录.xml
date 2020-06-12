@@ -31,7 +31,11 @@
         <#if h24AdmissionDischargeRecord.nation??>
         <ethnicGroupCode code="${h24AdmissionDischargeRecord.nation!'NA'}" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)" displayName="<@dict_tag value="${h24AdmissionDischargeRecord.nation!'NA'}" datasetCloumn="NATION">${dict.desc}</@dict_tag>"/>
         </#if>
-        <age value="${h24AdmissionDischargeRecord.ageYear!'NA'}" unit="岁"/>
+        <#if h24AdmissionDischargeRecord.ageYear??>
+        <age unit="岁" value="${h24AdmissionDischargeRecord.ageYear!'NA'}"/>
+        <#else>
+        <age unit="月" value="${h24AdmissionDischargeRecord.patientMonth!'NA'}"/>
+        </#if>
         <occupation>
           <occupationCode code="${h24AdmissionDischargeRecord.occupatientionClassCode!'NA'}" displayName="<@dict_tag value="${h24AdmissionDischargeRecord.occupatientionClassCode!'NA'}" datasetCloumn="OCCUPATIENTION_CLASS_CODE">${dict.desc}</@dict_tag>" codeSystem="2.16.156.10011.2.3.3.13" codeSystemName="从业状况(个人身体)代码表(GB/T 2261.4)"/>
         </occupation>

@@ -32,7 +32,11 @@
         <administrativeGenderCode code="${dischargeAbstract.patientSex!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${dischargeAbstract.patientSex!'NA'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
         <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
         <maritalStatusCode code="${dischargeAbstract.maritalStatusCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.5" codeSystemName="婚姻状况代码表(GB/T 2261.2)" displayName="<@dict_tag value="${dischargeAbstract.maritalStatusCode!'NA'}" datasetCloumn="MARITAL_STATUS_CODE">${dict.desc}</@dict_tag>"/>
-        <age value="${dischargeAbstract.ageYear!'NA'}" unit="岁"/>
+        <#if dischargeAbstract.ageYear??>
+        <age unit="岁" value="${dischargeAbstract.ageYear!'NA'}"/>
+        <#else>
+        <age unit="月" value="${dischargeAbstract.patientMonth!'NA'}"/>
+        </#if>
         <occupation>
           <occupationCode code="${dischargeAbstract.occupatientionClassCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.13" codeSystemName="从业状况(个人身体)代码表(GB/T 2261.4)" displayName="<@dict_tag value="${dischargeAbstract.occupatientionClassCode!'NA'}" datasetCloumn="OCCUPATIENTION_CLASS_CODE">${dict.desc}</@dict_tag>"/>
         </occupation>
