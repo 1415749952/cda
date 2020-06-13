@@ -25,7 +25,9 @@
         <county>${inpatientMedicalRecord.currentCounty!'NA'}</county>
         <city>${inpatientMedicalRecord.currentCity!'NA'}</city>
         <state>${inpatientMedicalRecord.currentProvince!'NA'}</state>
+        <#if inpatientMedicalRecord.currentZipCode??>
         <postalCode>${inpatientMedicalRecord.currentZipCode!'NA'}</postalCode>
+        </#if>
       </addr>
       <telecom value="${inpatientMedicalRecord.currentPhone!'NA'}"/>
       <patient classCode="PSN" determinerCode="INSTANCE">
@@ -41,7 +43,9 @@
               <county>${inpatientMedicalRecord.birthplaceCounty!'NA'}</county>
               <city>${inpatientMedicalRecord.birthplaceCity!'NA'}</city>
               <state>${inpatientMedicalRecord.birthplaceProvince!'NA'}</state>
+              <#if inpatientMedicalRecord.accountZipCode??>
               <postalCode>${inpatientMedicalRecord.accountZipCode!'NA'}</postalCode>
+              </#if>
             </addr>
           </place>
         </birthplace>
@@ -61,7 +65,9 @@
             <county>${inpatientMedicalRecord.workunitCounty!'NA'}</county>
             <city>${inpatientMedicalRecord.workunitCity!'NA'}</city>
             <state>${inpatientMedicalRecord.workunitProvince!'NA'}</state>
+            <#if inpatientMedicalRecord.workunitZipCode??>
             <postalCode>${inpatientMedicalRecord.workunitZipCode!'NA'}</postalCode>
+            </#if>
           </addr>
         </employerOrganization>
         <household>
@@ -73,7 +79,9 @@
               <county>${inpatientMedicalRecord.accountCounty!'NA'}</county>
               <city>${inpatientMedicalRecord.accountCity!'NA'}</city>
               <state>${inpatientMedicalRecord.accountProvince!'NA'}</state>
+              <#if inpatientMedicalRecord.accountZipCode??>
               <postalCode>${inpatientMedicalRecord.accountZipCode!'NA'}</postalCode>
+              </#if>
             </addr>
           </place>
         </household>
@@ -210,7 +218,9 @@
         <county>${inpatientMedicalRecord.cacounty!'NA'}</county>
         <city>${inpatientMedicalRecord.cacity!'NA'}</city>
         <state>${inpatientMedicalRecord.caprovince!'NA'}</state>
+        <#if inpatientMedicalRecord.workunitZipCode??>
         <postalCode>${inpatientMedicalRecord.workunitZipCode!'NA'}</postalCode>
+        </#if>
       </addr>
       <telecom use="H" value="${inpatientMedicalRecord.contactPhone!'NA'}"/>
       <associatedPerson classCode="PSN" determinerCode="INSTANCE">

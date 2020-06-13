@@ -97,7 +97,9 @@
         <county>${emrBasicpatient.addressCounty!'NA'}</county>
         <city>${emrBasicpatient.addressCity!'NA'}</city>
         <state>${emrBasicpatient.addressProvince!'NA'}</state>
+        <#if emrBasicpatient.zipCode??>
         <postalCode>${emrBasicpatient.zipCode!'NA'}</postalCode>
+        </#if>
       </addr>
       <#if emrBasicpatient.currentPhone??>
       <!--电话号码-->
