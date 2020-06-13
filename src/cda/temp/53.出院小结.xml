@@ -23,7 +23,9 @@
         <county>${dischargeAbstract.addressCounty!'NA'}</county>
         <city>${dischargeAbstract.addressCity!'NA'}</city>
         <state>${dischargeAbstract.addressProvince!'NA'}</state>
+        <#if dischargeAbstract.zipCode??>
         <postalCode>${dischargeAbstract.zipCode!'NA'}</postalCode>
+        </#if>
       </addr>
       <telecom value="${dischargeAbstract.patientPhone!'NA'}"/>
       <patient classCode="PSN" determinerCode="INSTANCE">
