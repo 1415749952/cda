@@ -29,7 +29,7 @@
       </addr>
       <telecom value="${cnInpatientMedicalRecord.currentPhone!'NA'}"/>
       <patient classCode="PSN" determinerCode="INSTANCE">
-        <id extension="${cnInpatientMedicalRecord.identityType!'NA'}" root="2.16.156.10011.1.3"/>
+        <id extension="${cnInpatientMedicalRecord.identityNo!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${cnInpatientMedicalRecord.patientName!'NA'}</name>
         <administrativeGenderCode code="${cnInpatientMedicalRecord.sexCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${cnInpatientMedicalRecord.sexCode!'NA'}" datasetCloumn="SEX_CODE">${dict.desc}</@dict_tag>"/>
         <birthTime value="${cnInpatientMedicalRecord.birthday!'NA'}"/>

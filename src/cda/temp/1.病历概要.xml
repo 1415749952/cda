@@ -26,7 +26,9 @@
         <county>${emrBasicpatient.addressCounty!'NA'}</county>
         <city>${emrBasicpatient.addressCity!'NA'}</city>
         <state>${emrBasicpatient.addressProvince!'NA'}</state>
+        <#if emrBasicpatient.zipCode??>
         <postalCode>${emrBasicpatient.zipCode!'NA'}</postalCode>
+        </#if>
       </addr>
       <!--患者电话-->
       <#if emrBasicpatient.currentPhone??>
@@ -44,8 +46,8 @@
         <maritalStatusCode code="${emrBasicpatient.maritalStatusCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.5" codeSystemName="婚姻状况代码表(GB/T 2261.2)" displayName="<@dict_tag value="${emrBasicpatient.maritalStatusCode!'NA'}" datasetCloumn="MARITAL_STATUS_CODE">${dict.desc}</@dict_tag>"/>
         <!--民族代码-->
         <ethnicGroupCode code="${emrBasicpatient.nation!'NA'}" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)" displayName="<@dict_tag value="${emrBasicpatient.nation!'NA'}" datasetCloumn="NATION">${dict.desc}</@dict_tag>"/>
-        <!--工作单位-->
         <#if emrBasicpatient.occupationName??>
+        <!--工作单位-->
         <employerOrganization>
           <name>${emrBasicpatient.occupationName!'NA'}</name>
           <telecom value="${emrBasicpatient.workunitPhone!'NA'}"/>
