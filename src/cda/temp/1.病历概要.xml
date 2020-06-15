@@ -65,7 +65,7 @@
   <!--创建者-->
   <author contextControlCode="OP" typeCode="AUT">
     <!--建档日期-->
-    <time value="${emrHealthevents.inputDate!'NA'}"/>
+    <time value="${emrBasicpatient.inputDate!'NA'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <!--建档者姓名-->
