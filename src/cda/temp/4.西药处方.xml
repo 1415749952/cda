@@ -39,7 +39,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${prescriptionWest.recipeOpenDate!'NA'}"/>
+    <time value="${prescriptionWest.recipeOpenDate!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>

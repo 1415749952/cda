@@ -38,7 +38,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${hours24AdmissionDeathRecord.inpDate!'NA'}"/>
+    <time value="${hours24AdmissionDeathRecord.inpDate!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -117,8 +117,8 @@
   <componentOf>
     <encompassingEncounter>
       <effectiveTime>
-        <low value="${hours24AdmissionDeathRecord.inpDate!'NA'}"/>
-        <high value="${hours24AdmissionDeathRecord.deathDate!'NA'}"/>
+        <low value="${hours24AdmissionDeathRecord.inpDate!'00000000'}"/>
+        <high value="${hours24AdmissionDeathRecord.deathDate!'00000000'}"/>
       </effectiveTime>
     </encompassingEncounter>
   </componentOf>
@@ -228,7 +228,7 @@
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE02.01.036.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="死亡日期时间"/>
               <effectiveTime>
-                <high value="${hours24AdmissionDeathRecord.deathDate!'NA'}"/>
+                <high value="${hours24AdmissionDeathRecord.deathDate!'00000000'}"/>
               </effectiveTime>
             </observation>
           </entry>

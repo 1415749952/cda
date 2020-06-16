@@ -28,7 +28,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${postoperatFirstCourse.signDatatime!'NA'}"/>
+    <time value="${postoperatFirstCourse.signDatatime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -45,7 +45,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${postoperatFirstCourse.signDatatime!'NA'}"/>
+    <time value="${postoperatFirstCourse.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>

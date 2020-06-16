@@ -23,7 +23,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${vbncRecord.postpartumObservationTime!'NA'}"/>
+    <time value="${vbncRecord.postpartumObservationTime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -194,13 +194,13 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.224.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="临产日期时间"/>
-              <value value="${vbncRecord.birthDatetime!'NA'}" xsi:type="TS"/>
+              <value value="${vbncRecord.birthDatetime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.10.154.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="胎膜破裂日期时间"/>
-              <value value="${vbncRecord.ruptureMembranesDatetime!'NA'}" xsi:type="TS"/>
+              <value value="${vbncRecord.ruptureMembranesDatetime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>
@@ -218,7 +218,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE04.10.250.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="宫缩开始日期时间"/>
-              <value value="${vbncRecord.pmouthOpfullTime!'NA'}" xsi:type="TS"/>
+              <value value="${vbncRecord.pmouthOpfullTime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>
@@ -230,7 +230,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE04.10.250.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="宫口开全日期时间"/>
-              <value value="${vbncRecord.pmouthOpfullTime!'NA'}" xsi:type="TS"/>
+              <value value="${vbncRecord.pmouthOpfullTime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>
@@ -242,7 +242,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE02.01.014.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="胎儿娩出日期时间"/>
-              <value value="${vbncRecord.fetalDisengageTime!'NA'}" xsi:type="TS"/>
+              <value value="${vbncRecord.fetalDisengageTime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>
@@ -254,7 +254,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.273.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="胎盘娩出日期时间"/>
-              <value value="${vbncRecord.placentalExpulsionTime!'NA'}" xsi:type="TS"/>
+              <value value="${vbncRecord.placentalExpulsionTime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>
@@ -476,7 +476,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.218.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="产后观察日期时间"/>
-              <value value="${vbncRecord.postpartumObservationTime!'NA'}" xsi:type="TS"/>
+              <value value="${vbncRecord.postpartumObservationTime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>

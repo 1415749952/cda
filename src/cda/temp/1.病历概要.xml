@@ -41,7 +41,7 @@
         <name><@privacy_tag value="${emrBasicpatient.patientName}" privacyId="2">${privacy}</@privacy_tag></name>
         <!--性别代码-->
         <administrativeGenderCode code="${emrBasicpatient.patientSex!'9'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${emrBasicpatient.patientSex!'9'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
+        <birthTime value="${emrBasicpatient.birthday!'00000000'}"/>
         <!--婚姻状况代码-->
         <maritalStatusCode code="${emrBasicpatient.maritalStatusCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.5" codeSystemName="婚姻状况代码表(GB/T 2261.2)" displayName="<@dict_tag value="${emrBasicpatient.maritalStatusCode!'NA'}" datasetCloumn="MARITAL_STATUS_CODE">${dict.desc}</@dict_tag>"/>
         <!--民族代码-->
@@ -65,7 +65,7 @@
   <!--创建者-->
   <author contextControlCode="OP" typeCode="AUT">
     <!--建档日期-->
-    <time value="${emrBasicpatient.inputDate!'NA'}"/>
+    <time value="${emrBasicpatient.inputDate!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <!--建档者姓名-->
@@ -288,13 +288,13 @@
               <component>
                 <observation classCode="OBS" moodCode="EVN">
                   <code code="DE06.00.092.00" displayName="入院日期时间" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
-                  <value xsi:type="TS" value="${emrHealthevents.inpDatetime!'NA'}"/>
+                  <value xsi:type="TS" value="${emrHealthevents.inpDatetime!'00000000'}"/>
                 </observation>
               </component>
               <component>
                 <observation classCode="OBS" moodCode="EVN">
                   <code code="DE06.00.017.00" displayName="出院日期时间" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
-                  <value xsi:type="TS" value="${emrHealthevents.dishospitalDatetime!'NA'}"/>
+                  <value xsi:type="TS" value="${emrHealthevents.dishospitalDatetime!'00000000'}"/>
                 </observation>
               </component>
             </organizer>
@@ -302,14 +302,14 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE04.01.018.00" displayName="发病日期时间" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
-              <value xsi:type="TS" value="${emrHealthevents.morbidityDatetime!'NA'}"/>
+              <value xsi:type="TS" value="${emrHealthevents.morbidityDatetime!'00000000'}"/>
             </observation>
           </entry>
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.10.053.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="就诊原因"/>
               <!--就诊日期时间 DE06.00.062.00-->
-              <effectiveTime value="${emrHealthevents.visitDatetime!'NA'}"/>
+              <effectiveTime value="${emrHealthevents.visitDatetime!'00000000'}"/>
               <value xsi:type="ST">${emrHealthevents.clinicReason!'NA'}</value>
             </observation>
           </entry>

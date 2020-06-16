@@ -27,7 +27,7 @@
       </patient>
       <providerOrganization classCode="ORG" determinerCode="INSTANCE">
         <asOrganizationPartOf classCode="PART">
-          <effectiveTime value="${deathCaseDiscussionRecord.discussDatatime!'NA'}"/>
+          <effectiveTime value="${deathCaseDiscussionRecord.discussDatatime!'00000000'}"/>
           <wholeOrganization>
             <addr>${deathCaseDiscussionRecord.discussPlace!'NA'}</addr>
           </wholeOrganization>
@@ -36,7 +36,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${deathCaseDiscussionRecord.signDatatime!'NA'}"/>
+    <time value="${deathCaseDiscussionRecord.signDatatime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -53,7 +53,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${deathCaseDiscussionRecord.signDatatime!'NA'}"/>
+    <time value="${deathCaseDiscussionRecord.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -67,7 +67,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${deathCaseDiscussionRecord.signDatatime!'NA'}"/>
+    <time value="${deathCaseDiscussionRecord.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -81,7 +81,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${deathCaseDiscussionRecord.signDatatime!'NA'}"/>
+    <time value="${deathCaseDiscussionRecord.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>

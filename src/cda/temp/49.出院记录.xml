@@ -28,7 +28,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${dischargeRecord.signDatatime!'NA'}"/>
+    <time value="${dischargeRecord.signDatatime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -45,7 +45,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${dischargeRecord.signDatatime!'NA'}"/>
+    <time value="${dischargeRecord.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id root="2.16.156.10011.1.4" extension="10316"/>
@@ -56,7 +56,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${dischargeRecord.signDatatime!'NA'}"/>
+    <time value="${dischargeRecord.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id root="2.16.156.10011.1.4" extension="10262"/>
@@ -67,7 +67,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${dischargeRecord.signDatatime!'NA'}"/>
+    <time value="${dischargeRecord.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id root="2.16.156.10011.1.4" extension="10262"/>

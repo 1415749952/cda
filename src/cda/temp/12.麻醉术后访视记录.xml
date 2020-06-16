@@ -34,7 +34,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${visitsRecAftAnesthesia.signDatetime!'NA'}"/>
+    <time value="${visitsRecAftAnesthesia.signDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -51,7 +51,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${visitsRecAftAnesthesia.consciousDatetime!'NA'}"/>
+    <time value="${visitsRecAftAnesthesia.consciousDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -70,7 +70,7 @@
   </relatedDocument>
   <componentOf>
     <encompassingEncounter>
-      <effectiveTime value="${visitsRecAftAnesthesia.consciousDatetime!'NA'}"/>
+      <effectiveTime value="${visitsRecAftAnesthesia.consciousDatetime!'00000000'}"/>
       <location>
         <healthCareFacility>
           <serviceProviderOrganization>
@@ -224,7 +224,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.233.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="清醒日期时间"/>
-              <value value="${visitsRecAftAnesthesia.consciousDatetime!'NA'}" xsi:type="TS"/>
+              <value value="${visitsRecAftAnesthesia.consciousDatetime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>

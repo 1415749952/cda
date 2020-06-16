@@ -23,7 +23,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${expectantRecord.deliveryDatetime!'NA'}"/>
+    <time value="${expectantRecord.deliveryDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="234234234" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -40,7 +40,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${expectantRecord.deliveryDatetime!'NA'}"/>
+    <time value="${expectantRecord.deliveryDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -51,7 +51,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${expectantRecord.deliveryDatetime!'NA'}"/>
+    <time value="${expectantRecord.deliveryDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -126,7 +126,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.197.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="待产日期时间"/>
-              <value value="${expectantRecord.predeliveryDatetime!'NA'}" xsi:type="TS"/>
+              <value value="${expectantRecord.predeliveryDatetime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>
@@ -395,7 +395,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE09.00.053.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="产程记录日期时间"/>
-              <value value="${expectantRecord.deliveryDatetime!'NA'}" xsi:type="TS"/>
+              <value value="${expectantRecord.deliveryDatetime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>

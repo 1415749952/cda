@@ -40,7 +40,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${admissionRecord.inpDate!'NA'}" xsi:type="TS"/>
+    <time value="${admissionRecord.inpDate!'00000000'}" xsi:type="TS"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -120,7 +120,7 @@
   </relatedDocument>
   <componentOf>
     <encompassingEncounter>
-      <effectiveTime value="${admissionRecord.inpDate!'NA'}"/>
+      <effectiveTime value="${admissionRecord.inpDate!'00000000'}"/>
       <location>
         <healthCareFacility>
           <serviceProviderOrganization>
@@ -456,7 +456,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.01.025.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="初步诊断-西医诊断名称"/>
-              <effectiveTime value="${admissionRecord.preliminaryDiagnosisTodayDesc!'NA'}"/>
+              <effectiveTime value="${admissionRecord.preliminaryDiagnosisTodayDesc!'00000000'}"/>
               <value xsi:type="ST">${admissionRecord.inpWmDiagname!'NA'}</value>
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">
@@ -481,7 +481,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.10.172.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="初步诊断-中医病名名称"/>
-              <effectiveTime value="${admissionRecord.preDiagnosisTodayDesc!'NA'}"/>
+              <effectiveTime value="${admissionRecord.preDiagnosisTodayDesc!'00000000'}"/>
               <value xsi:type="ST">${admissionRecord.inpTcmDiagname!'NA'}</value>
               <#if admissionRecord.diseasesCode??>
               <entryRelationship typeCode="COMP">
@@ -516,7 +516,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.01.025.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="修正诊断-西医诊断名称"/>
-              <effectiveTime value="${admissionRecord.correctDiagnosisDate!'NA'}"/>
+              <effectiveTime value="${admissionRecord.correctDiagnosisDate!'00000000'}"/>
               <value xsi:type="ST">${admissionRecord.correctDiagnosisWmName!'NA'}</value>
               <#if admissionRecord.correctDiagnosisWmCode??>
               <entryRelationship typeCode="COMP">
@@ -537,7 +537,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.10.172.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="修正诊断-中医病名名称"/>
-              <effectiveTime value="${admissionRecord.correctDiagnosisDate!'NA'}"/>
+              <effectiveTime value="${admissionRecord.correctDiagnosisDate!'00000000'}"/>
               <value xsi:type="ST">${admissionRecord.inpTcmDiagname!'NA'}</value>
               <#if admissionRecord.diseaseNameCode??>
               <entryRelationship typeCode="COMP">
@@ -572,7 +572,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.01.025.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="确定诊断-西医诊断名称"/>
-              <effectiveTime value="${admissionRecord.diagnosisTodayDesc!'NA'}"/>
+              <effectiveTime value="${admissionRecord.diagnosisTodayDesc!'00000000'}"/>
               <value xsi:type="ST">${admissionRecord.diagWmDiagnosisName!'NA'}</value>
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">
@@ -591,7 +591,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.10.172.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="确定诊断-中医病名名称"/>
-              <effectiveTime value="${admissionRecord.diagnosisTodayDesc!'NA'}"/>
+              <effectiveTime value="${admissionRecord.diagnosisTodayDesc!'00000000'}"/>
               <value xsi:type="ST">${admissionRecord.diagCmDisseaseName!'NA'}</value>
               <#if admissionRecord.diagnosisTcmDiseasesCode??>
               <entryRelationship typeCode="COMP">
@@ -626,7 +626,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.01.025.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="补充诊断-西医诊断名称"/>
-              <effectiveTime value="${admissionRecord.supplementaryDiagnosticDate!'NA'}"/>
+              <effectiveTime value="${admissionRecord.supplementaryDiagnosticDate!'00000000'}"/>
               <value xsi:type="ST">${admissionRecord.supplementaryDiagnosisName!'NA'}</value>
               <#if admissionRecord.supplementaryDiagnosisCode??>
               <entryRelationship typeCode="COMP">

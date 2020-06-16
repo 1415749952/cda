@@ -30,7 +30,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${transfusionRecord.signDatetime!'NA'}"/>
+    <time value="${transfusionRecord.signDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -47,7 +47,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${transfusionRecord.signDatetime!'NA'}"/>
+    <time value="${transfusionRecord.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -149,7 +149,7 @@
           <entry>
             <procedure classCode="PROC" moodCode="EVN">
               <effectiveTime>
-                <high value="${transfusionRecord.bloodTransferedDatetime!'NA'}"/>
+                <high value="${transfusionRecord.bloodTransferedDatetime!'00000000'}"/>
               </effectiveTime>
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">

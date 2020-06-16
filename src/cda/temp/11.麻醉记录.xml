@@ -30,7 +30,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${anesthesiaRecords.signDatetime!'NA'}"/>
+    <time value="${anesthesiaRecords.signDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -47,7 +47,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${anesthesiaRecords.signDatetime!'NA'}"/>
+    <time value="${anesthesiaRecords.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -66,7 +66,7 @@
   </relatedDocument>
   <componentOf>
     <encompassingEncounter>
-      <effectiveTime value="${anesthesiaRecords.operationBeginDatetime!'NA'}"/>
+      <effectiveTime value="${anesthesiaRecords.operationBeginDatetime!'00000000'}"/>
       <location>
         <healthCareFacility>
           <serviceProviderOrganization>
@@ -222,7 +222,7 @@
           <entry>
             <procedure classCode="PROC" moodCode="EVN">
               <effectiveTime>
-                <high value="${anesthesiaRecords.bloodTransferedDatetime!'NA'}"/>
+                <high value="${anesthesiaRecords.bloodTransferedDatetime!'00000000'}"/>
               </effectiveTime>
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">
@@ -260,7 +260,7 @@
             <procedure classCode="PROC" moodCode="EVN">
               <code code="${anesthesiaRecords.anesthesiaMethodCode!'NA'}" codeSystem="2.16.156.10011.2.3.1.159" codeSystemName="麻醉方法代码表" displayName="<@dict_tag value="${anesthesiaRecords.anesthesiaMethodCode!'NA'}" datasetCloumn="ANESTHESIA_METHOD_CODE">${dict.desc}</@dict_tag>"/>
               <effectiveTime>
-                <low value="${anesthesiaRecords.anesthesiaMethodCode!'NA'}"/>
+                <low value="${anesthesiaRecords.anesthesiaMethodCode!'00000000'}"/>
               </effectiveTime>
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">
@@ -418,8 +418,8 @@
             <procedure classCode="PROC" moodCode="EVN">
               <code code="${anesthesiaRecords.operationCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.12" codeSystemName="手术(操作)代码表(ICD-9-CM)"/>
               <effectiveTime>
-                <low value="${anesthesiaRecords.operationBeginDatetime!'NA'}"/>
-                <high value="${anesthesiaRecords.operatiionEndDatetime!'NA'}"/>
+                <low value="${anesthesiaRecords.operationBeginDatetime!'00000000'}"/>
+                <high value="${anesthesiaRecords.operatiionEndDatetime!'00000000'}"/>
               </effectiveTime>
               <performer>
                 <assignedEntity>
@@ -471,7 +471,7 @@
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.185.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="患者去向代码"/>
               <effectiveTime>
-                <high value="${anesthesiaRecords.outOperateroomDatetime!'NA'}"/>
+                <high value="${anesthesiaRecords.outOperateroomDatetime!'00000000'}"/>
               </effectiveTime>
               <value xsi:type="ST"/>
             </observation>

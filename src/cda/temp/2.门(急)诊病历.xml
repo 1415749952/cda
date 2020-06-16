@@ -20,7 +20,7 @@
         <id extension="${emrBasicpatient.identityNo!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${outpatientEmergencyRecords.patientName!'NA'}</name>
         <administrativeGenderCode code="${outpatientEmergencyRecords.patientSex!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${outpatientEmergencyRecords.patientSex!'NA'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
+        <birthTime value="${emrBasicpatient.birthday!'00000000'}"/>
         <#if outpatientEmergencyRecords.ageYear??>
         <age unit="岁" value="${outpatientEmergencyRecords.ageYear!'NA'}"/>
         <#else>
@@ -40,7 +40,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${outpatientEmergencyRecords.visitDatetime!'NA'}"/>
+    <time value="${outpatientEmergencyRecords.visitDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -265,12 +265,12 @@
                 <observation classCode="OBS" moodCode="EVN">
                   <code code="DE06.00.288.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="医嘱项目内容"/>
                   <effectiveTime>
-                    <low value="${outpatientEmergencyRecords.adviceOpenDatetime!'NA'}"/>
-                    <high value="${outpatientEmergencyRecords.cancelAdviceDatetime!'NA'}"/>
+                    <low value="${outpatientEmergencyRecords.adviceOpenDatetime!'00000000'}"/>
+                    <high value="${outpatientEmergencyRecords.cancelAdviceDatetime!'00000000'}"/>
                   </effectiveTime>
                   <value xsi:type="ST">${outpatientEmergencyRecords.adviceItemContent!'NA'}</value>
                   <performer>
-                    <time value="${outpatientEmergencyRecords.adviceExecDatetime!'NA'}"/>
+                    <time value="${outpatientEmergencyRecords.adviceExecDatetime!'00000000'}"/>
                     <assignedEntity>
                       <id root="2.16.156.10011.1.4"/>
                       <code displayName="医嘱执行者"/>
@@ -283,7 +283,7 @@
                     </assignedEntity>
                   </performer>
                   <author>
-                    <time value="${outpatientEmergencyRecords.adviceOpenDatetime!'NA'}"/>
+                    <time value="${outpatientEmergencyRecords.adviceOpenDatetime!'00000000'}"/>
                     <assignedAuthor>
                       <id root="2.16.156.10011.1.4"/>
                       <assignedPerson>
@@ -295,7 +295,7 @@
                     </assignedAuthor>
                   </author>
                   <participant typeCode="ATND">
-                    <time value="${outpatientEmergencyRecords.checkAdviceDatetime!'NA'}"/>
+                    <time value="${outpatientEmergencyRecords.checkAdviceDatetime!'00000000'}"/>
                     <participantRole classCode="ASSIGNED">
                       <id root="2.16.156.10011.1.4"/>
                       <code displayName="医嘱审核人"/>
@@ -305,7 +305,7 @@
                     </participantRole>
                   </participant>
                   <participant typeCode="ATND">
-                    <time value="${outpatientEmergencyRecords.cancelAdviceDatetime!'NA'}"/>
+                    <time value="${outpatientEmergencyRecords.cancelAdviceDatetime!'00000000'}"/>
                     <participantRole classCode="ASSIGNED">
                       <id root="2.16.156.10011.1.4"/>
                       <code displayName="医嘱取消人"/>

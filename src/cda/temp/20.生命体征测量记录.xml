@@ -32,7 +32,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${monitorVitalSignsRecord.signDatetime!'NA'}" xsi:type="TS"/>
+    <time value="${monitorVitalSignsRecord.signDatetime!'00000000'}" xsi:type="TS"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <code displayName="护士"/>
@@ -50,7 +50,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${monitorVitalSignsRecord.signDatetime!'NA'}"/>
+    <time value="${monitorVitalSignsRecord.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -79,7 +79,7 @@
     <encompassingEncounter classCode="ENC" moodCode="EVN">
       <code/>
       <effectiveTime>
-        <low value="${monitorVitalSignsRecord.inpDatetime!'NA'}"/>
+        <low value="${monitorVitalSignsRecord.inpDatetime!'00000000'}"/>
         <width unit="天" value="${monitorVitalSignsRecord.inpDays!'NA'}"/>
       </effectiveTime>
       <location typeCode="LOC">

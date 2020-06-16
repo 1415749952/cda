@@ -33,7 +33,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${surveyRecord.inspectionReportDate!'NA'}"/>
+    <time value="${surveyRecord.inspectionReportDate!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -154,7 +154,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.01.024.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="诊断代码"/>
-              <effectiveTime value="${surveyRecord.diagnosisDate!'NA'}"/>
+              <effectiveTime value="${surveyRecord.diagnosisDate!'00000000'}"/>
               <value code="${surveyRecord.diagCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" xsi:type="CD" displayName="<@dict_tag value="${surveyRecord.diagCode!'NA'}" datasetCloumn="DIAG_CODE">${dict.desc}</@dict_tag>"/>
               <performer>
                 <assignedEntity>
@@ -190,14 +190,14 @@
               <component>
                 <observation classCode="OBS" moodCode="EVN">
                   <code code="DE04.30.019.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="检验项目代码"/>
-                  <effectiveTime value="${surveyRecord.inspectionDate!'NA'}"/>
+                  <effectiveTime value="${surveyRecord.inspectionDate!'00000000'}"/>
                   <value xsi:type="ST">${surveyRecord.inspectionItemCode!'NA'}</value>
                   <entryRelationship typeCode="COMP">
                     <observation classCode="OBS" moodCode="EVN">
                       <code code="DE04.50.134.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="标本类别"/>
                       <effectiveTime>
-                        <low value="${surveyRecord.specimenSampleDate!'NA'}"/>
-                        <high value="${surveyRecord.receiveSpecimenDate!'NA'}"/>
+                        <low value="${surveyRecord.specimenSampleDate!'00000000'}"/>
+                        <high value="${surveyRecord.receiveSpecimenDate!'00000000'}"/>
                       </effectiveTime>
                       <value xsi:type="ST">${surveyRecord.sampleType!'NA'}</value>
                     </observation>
@@ -235,14 +235,14 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE04.30.019.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="检验项目代码"/>
-              <effectiveTime value="${surveyRecord.inspectionDate!'NA'}"/>
+              <effectiveTime value="${surveyRecord.inspectionDate!'00000000'}"/>
               <value xsi:type="ST">${surveyRecord.inspectionItemCode!'NA'}</value>
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">
                   <code code="DE04.50.134.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="标本类别"/>
                   <effectiveTime>
-                    <low value="${surveyRecord.specimenSampleDate!'NA'}"/>
-                    <high value="${surveyRecord.receiveSpecimenDate!'NA'}"/>
+                    <low value="${surveyRecord.specimenSampleDate!'00000000'}"/>
+                    <high value="${surveyRecord.receiveSpecimenDate!'00000000'}"/>
                   </effectiveTime>
                   <value xsi:type="ST">${surveyRecord.sampleType!'NA'}</value>
                 </observation>

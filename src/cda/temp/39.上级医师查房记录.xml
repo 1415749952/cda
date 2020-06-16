@@ -19,7 +19,7 @@
         <id extension="${emrBasicpatient.identityNo!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${superiorDoctorWardround.patientName!'NA'}</name>
         <administrativeGenderCode code="${superiorDoctorWardround.sexCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${superiorDoctorWardround.sexCode!'NA'}" datasetCloumn="SEX_CODE">${dict.desc}</@dict_tag>"/>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
+        <birthTime value="${emrBasicpatient.birthday!'00000000'}"/>
         <#if superiorDoctorWardround.ageYear??>
         <age unit="岁" value="${superiorDoctorWardround.ageYear!'NA'}"/>
         <#else>
@@ -29,7 +29,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${superiorDoctorWardround.wardroundsDatatime!'NA'}"/>
+    <time value="${superiorDoctorWardround.wardroundsDatatime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -46,7 +46,7 @@
     </assignedCustodian>
   </custodian>
   <legalAuthenticator>
-    <time value="${superiorDoctorWardround.signDatatime!'NA'}"/>
+    <time value="${superiorDoctorWardround.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -57,7 +57,7 @@
     </assignedEntity>
   </legalAuthenticator>
   <authenticator>
-    <time value="${superiorDoctorWardround.signDatatime!'NA'}" xsi:type="TS"/>
+    <time value="${superiorDoctorWardround.signDatatime!'00000000'}" xsi:type="TS"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -68,7 +68,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${superiorDoctorWardround.signDatatime!'NA'}"/>
+    <time value="${superiorDoctorWardround.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -88,7 +88,7 @@
   <componentOf>
     <encompassingEncounter>
       <code displayName="查房日期时间"/>
-      <effectiveTime value="${superiorDoctorWardround.wardroundsDatatime!'NA'}" xsi:type="IVL_TS"/>
+      <effectiveTime value="${superiorDoctorWardround.wardroundsDatatime!'00000000'}" xsi:type="IVL_TS"/>
       <location>
         <healthCareFacility>
           <serviceProviderOrganization>

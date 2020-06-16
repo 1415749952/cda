@@ -21,7 +21,7 @@
         <id extension="${emrBasicpatient.identityNo!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${emergencyMedicalRecords.patientName!'NA'}</name>
         <administrativeGenderCode code="${emergencyMedicalRecords.patientSex!'NA'}" codeSystemName="生理性别代码表(GB/T 2261.1)" codeSystem="2.16.156.10011.2.3.3.4" displayName="<@dict_tag value="${emergencyMedicalRecords.patientSex!'NA'}" datasetCloumn="PATIENT_SEX">${dict.desc}</@dict_tag>"/>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
+        <birthTime value="${emrBasicpatient.birthday!'00000000'}"/>
         <#if emergencyMedicalRecords.ageYear??>
         <age unit="岁" value="${emergencyMedicalRecords.ageYear!'NA'}"/>
         <#else>
@@ -41,7 +41,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${emergencyMedicalRecords.visitDatetime!'NA'}"/>
+    <time value="${emergencyMedicalRecords.visitDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -174,13 +174,13 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.062.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="就诊日期时间"/>
-              <value xsi:type="TS" value="${emergencyMedicalRecords.visitDatetime!'NA'}"/>
+              <value xsi:type="TS" value="${emergencyMedicalRecords.visitDatetime!'00000000'}"/>
             </observation>
           </entry>
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.235.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="收入观察室日期时间"/>
-              <value xsi:type="TS" value="${emergencyMedicalRecords.inObservationDatetime!'NA'}"/>
+              <value xsi:type="TS" value="${emergencyMedicalRecords.inObservationDatetime!'00000000'}"/>
             </observation>
           </entry>
           <entry>
@@ -283,12 +283,12 @@
                 <observation classCode="OBS" moodCode="EVN">
                   <code code="DE06.00.288.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="医嘱项目内容"/>
                   <effectiveTime>
-                    <low value="${emergencyMedicalRecords.adviceOpenDatetime!'NA'}"/>
-                    <high value="${emergencyMedicalRecords.cancelAdviceDatetime!'NA'}"/>
+                    <low value="${emergencyMedicalRecords.adviceOpenDatetime!'00000000'}"/>
+                    <high value="${emergencyMedicalRecords.cancelAdviceDatetime!'00000000'}"/>
                   </effectiveTime>
                   <value xsi:type="ST">${emergencyMedicalRecords.adviceItemContent!'NA'}</value>
                   <performer>
-                    <time value="${emergencyMedicalRecords.adviceExecDatetime!'NA'}"/>
+                    <time value="${emergencyMedicalRecords.adviceExecDatetime!'00000000'}"/>
                     <assignedEntity>
                       <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
                       <code/>
@@ -301,7 +301,7 @@
                     </assignedEntity>
                   </performer>
                   <author>
-                    <time value="${emergencyMedicalRecords.adviceOpenDatetime!'NA'}"/>
+                    <time value="${emergencyMedicalRecords.adviceOpenDatetime!'00000000'}"/>
                     <assignedAuthor>
                       <id extension="医务人员编号" root="2.16.156.10011.1.4"/>
                       <assignedPerson>
@@ -313,7 +313,7 @@
                     </assignedAuthor>
                   </author>
                   <participant typeCode="ATND">
-                    <time value="${emergencyMedicalRecords.checkAdviceDatetime!'NA'}"/>
+                    <time value="${emergencyMedicalRecords.checkAdviceDatetime!'00000000'}"/>
                     <participantRole classCode="ASSIGNED">
                       <id extension="NA" root="2.16.156.10011.1.4"/>
                       <code displayName="医嘱审核人"/>
@@ -323,7 +323,7 @@
                     </participantRole>
                   </participant>
                   <participant typeCode="ATND">
-                    <time value="${emergencyMedicalRecords.cancelAdviceDatetime!'NA'}"/>
+                    <time value="${emergencyMedicalRecords.cancelAdviceDatetime!'00000000'}"/>
                     <participantRole classCode="ASSIGNED">
                       <id extension="NA" root="2.16.156.10011.1.4"/>
                       <code displayName="医嘱取消人"/>
@@ -400,8 +400,8 @@
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.181.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="急诊抢救记录"/>
               <effectiveTime>
-                <low value="${emergencyMedicalRecords.rescueBeginDatetime!'NA'}"/>
-                <high value="${emergencyMedicalRecords.rescueEndDatetime!'NA'}"/>
+                <low value="${emergencyMedicalRecords.rescueBeginDatetime!'00000000'}"/>
+                <high value="${emergencyMedicalRecords.rescueEndDatetime!'00000000'}"/>
               </effectiveTime>
               <value xsi:type="ST">${emergencyMedicalRecords.emergencyRescueRecord!'NA'}</value>
               <entryRelationship typeCode="COMP">
@@ -432,7 +432,7 @@
           <entry typeCode="COMP">
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.181.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="急诊留观病程记录"/>
-              <effectiveTime value="${emergencyMedicalRecords.inObservationDatetime!'NA'}"/>
+              <effectiveTime value="${emergencyMedicalRecords.inObservationDatetime!'00000000'}"/>
               <value xsi:type="ST">${emergencyMedicalRecords.emergencyObservationCourse!'NA'}</value>
             </observation>
           </entry>

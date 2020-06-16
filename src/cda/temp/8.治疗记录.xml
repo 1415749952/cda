@@ -30,7 +30,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${treatmentRecord.signDatetime!'NA'}"/>
+    <time value="${treatmentRecord.signDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -47,7 +47,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${treatmentRecord.signDatetime!'NA'}"/>
+    <time value="${treatmentRecord.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -185,7 +185,7 @@
           <entry>
             <observation classCode="CASE" moodCode="EVN">
               <code code="DE06.00.108.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="门诊随访"/>
-              <effectiveTime value="${treatmentRecord.followupDate!'NA'}"/>
+              <effectiveTime value="${treatmentRecord.followupDate!'00000000'}"/>
               <value code="${treatmentRecord.visitWayCode!'NA'}" codeSystem="2.16.156.10011.2.3.1.183" codeSystemName="随访方式代码表" displayName="<@dict_tag value="${treatmentRecord.visitWayCode!'NA'}" datasetCloumn="VISIT_WAY_CODE">${dict.desc}</@dict_tag>" xsi:type="CD"/>
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">
@@ -207,7 +207,7 @@
             <procedure classCode="PROC" moodCode="EVN">
               <code code="${treatmentRecord.opertorCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.12" codeSystemName="手术(操作)代码表(ICD-9-CM)" displayName="<@dict_tag value="${treatmentRecord.opertorCode!'NA'}" datasetCloumn="OPERTOR_CODE">${dict.desc}</@dict_tag>"/>
               <effectiveTime>
-                <high value="${treatmentRecord.operatorDate!'NA'}"/>
+                <high value="${treatmentRecord.operatorDate!'00000000'}"/>
               </effectiveTime>
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">

@@ -27,7 +27,7 @@
       </patient>
       <providerOrganization classCode="ORG" determinerCode="INSTANCE">
         <asOrganizationPartOf classCode="PART">
-          <effectiveTime value="${preOperationDiscussion.discussDatatime!'NA'}"/>
+          <effectiveTime value="${preOperationDiscussion.discussDatatime!'00000000'}"/>
           <wholeOrganization>
             <addr>${preOperationDiscussion.discussPlace!'NA'}</addr>
           </wholeOrganization>
@@ -36,7 +36,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${preOperationDiscussion.signDatatime!'NA'}"/>
+    <time value="${preOperationDiscussion.signDatatime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -53,7 +53,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${preOperationDiscussion.signDatatime!'NA'}"/>
+    <time value="${preOperationDiscussion.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -67,7 +67,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${preOperationDiscussion.signDatatime!'NA'}"/>
+    <time value="${preOperationDiscussion.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -81,7 +81,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${preOperationDiscussion.signDatatime!'NA'}"/>
+    <time value="${preOperationDiscussion.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -203,7 +203,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.221.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="拟实施手术及操作日期时间"/>
-              <value value="${preOperationDiscussion.intentOperateDatetime!'NA'}" xsi:type="TS"/>
+              <value value="${preOperationDiscussion.intentOperateDatetime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>

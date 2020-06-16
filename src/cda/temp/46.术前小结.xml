@@ -28,7 +28,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${preOperationSummary.stageSummaryDatatime!'NA'}"/>
+    <time value="${preOperationSummary.stageSummaryDatatime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -45,7 +45,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${preOperationSummary.signDatatime!'NA'}"/>
+    <time value="${preOperationSummary.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -56,7 +56,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${preOperationSummary.signDatatime!'NA'}"/>
+    <time value="${preOperationSummary.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -237,7 +237,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.221.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="拟实施手术及操作日期时间"/>
-              <value value="${preOperationSummary.intentOperateDatetime!'NA'}" xsi:type="TS"/>
+              <value value="${preOperationSummary.intentOperateDatetime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           </#if>

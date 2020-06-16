@@ -43,7 +43,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${h24AdmissionDischargeRecord.outhosAdvicOpenDate!'NA'}"/>
+    <time value="${h24AdmissionDischargeRecord.outhosAdvicOpenDate!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -124,8 +124,8 @@
   <componentOf>
     <encompassingEncounter>
       <effectiveTime>
-        <low value="${h24AdmissionDischargeRecord.inpDate!'NA'}"/>
-        <high value="${h24AdmissionDischargeRecord.dishospitalDatetime!'NA'}"/>
+        <low value="${h24AdmissionDischargeRecord.inpDate!'00000000'}"/>
+        <high value="${h24AdmissionDischargeRecord.dishospitalDatetime!'00000000'}"/>
       </effectiveTime>
     </encompassingEncounter>
   </componentOf>
@@ -312,7 +312,7 @@
           <entry>
             <observation classCode="OBS" moodCode="RQO">
               <code code="DE06.00.287.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="出院医嘱"/>
-              <effectiveTime value="${h24AdmissionDischargeRecord.outhosAdvicOpenDate!'NA'}"/>
+              <effectiveTime value="${h24AdmissionDischargeRecord.outhosAdvicOpenDate!'00000000'}"/>
               <value xsi:type="ST">${h24AdmissionDischargeRecord.outhosAdvic!'NA'}</value>
             </observation>
           </entry>

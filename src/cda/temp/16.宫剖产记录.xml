@@ -23,7 +23,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${caesareanSectionRecord.operateEndTime!'NA'}"/>
+    <time value="${caesareanSectionRecord.operateEndTime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -181,7 +181,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.197.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="待产日期时间"/>
-              <value value="${caesareanSectionRecord.predeliveryDatetime!'NA'}" xsi:type="TS"/>
+              <value value="${caesareanSectionRecord.predeliveryDatetime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>
@@ -222,7 +222,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.221.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="手术开始日期时间"/>
-              <value value="${caesareanSectionRecord.operationStartTime!'NA'}" xsi:type="TS"/>
+              <value value="${caesareanSectionRecord.operationStartTime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>
@@ -416,7 +416,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE06.00.218.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="手术结束日期时间"/>
-              <value value="${caesareanSectionRecord.operateEndTime!'NA'}" xsi:type="TS"/>
+              <value value="${caesareanSectionRecord.operateEndTime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>

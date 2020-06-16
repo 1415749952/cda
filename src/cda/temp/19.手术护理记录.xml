@@ -33,7 +33,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${operationCareRecord.signDatetime!'NA'}"/>
+    <time value="${operationCareRecord.signDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <code displayName="巡台护士"/>
@@ -51,7 +51,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${operationCareRecord.signDatetime!'NA'}"/>
+    <time value="${operationCareRecord.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -62,7 +62,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${operationCareRecord.signDatetime!'NA'}"/>
+    <time value="${operationCareRecord.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -73,7 +73,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${operationCareRecord.signDatetime!'NA'}"/>
+    <time value="${operationCareRecord.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -84,7 +84,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${operationCareRecord.signDatetime!'NA'}"/>
+    <time value="${operationCareRecord.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -292,7 +292,7 @@
               <code/>
               <statusCode code="completed"/>
               <participant typeCode="ATND">
-                <time value="${operationCareRecord.signDatetime!'NA'}"/>
+                <time value="${operationCareRecord.signDatetime!'00000000'}"/>
                 <participantRole classCode="ASSIGNED">
                   <id extension="NA" root="2.16.156.10011.1.4"/>
                   <code displayName="巡台护士"/>
@@ -302,7 +302,7 @@
                 </participantRole>
               </participant>
               <participant typeCode="ATND">
-                <time value="${operationCareRecord.signDatetime!'NA'}"/>
+                <time value="${operationCareRecord.signDatetime!'00000000'}"/>
                 <participantRole classCode="ASSIGNED">
                   <id extension="NA" root="2.16.156.10011.1.4"/>
                   <code displayName="器械护士"/>
@@ -330,7 +330,7 @@
               <code/>
               <statusCode/>
               <participant typeCode="ATND">
-                <time value="${operationCareRecord.signDatetime!'NA'}"/>
+                <time value="${operationCareRecord.signDatetime!'00000000'}"/>
                 <participantRole classCode="ASSIGNED">
                   <id extension="NA" root="2.16.156.10011.1.4"/>
                   <code displayName="巡台护士"/>
@@ -340,7 +340,7 @@
                 </participantRole>
               </participant>
               <participant typeCode="ATND">
-                <time value="${operationCareRecord.signDatetime!'NA'}"/>
+                <time value="${operationCareRecord.signDatetime!'00000000'}"/>
                 <participantRole classCode="ASSIGNED">
                   <id extension="NA" root="2.16.156.10011.1.4"/>
                   <code displayName="器械护士"/>
@@ -368,7 +368,7 @@
               <code/>
               <statusCode code="completed"/>
               <participant typeCode="ATND">
-                <time value="${operationCareRecord.signDatetime!'NA'}"/>
+                <time value="${operationCareRecord.signDatetime!'00000000'}"/>
                 <participantRole classCode="ASSIGNED">
                   <id extension="NA" root="2.16.156.10011.1.4"/>
                   <code displayName="巡台护士"/>
@@ -378,7 +378,7 @@
                 </participantRole>
               </participant>
               <participant typeCode="ATND">
-                <time value="${operationCareRecord.signDatetime!'NA'}"/>
+                <time value="${operationCareRecord.signDatetime!'00000000'}"/>
                 <participantRole classCode="ASSIGNED">
                   <id extension="NA" root="2.16.156.10011.1.4"/>
                   <code displayName="器械护士"/>
@@ -412,8 +412,8 @@
               <code code="${operationCareRecord.operationCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.12" codeSystemName="手术(操作)代码表(ICD-9-CM)" displayName="<@dict_tag value="${operationCareRecord.operationCode!'NA'}" datasetCloumn="OPERATION_CODE">${dict.desc}</@dict_tag>"/>
               <statusCode/>
               <effectiveTime>
-                <low value="${operationCareRecord.startDateTime!'NA'}"/>
-                <high value="${operationCareRecord.endDateTime!'NA'}"/>
+                <low value="${operationCareRecord.startDateTime!'00000000'}"/>
+                <high value="${operationCareRecord.endDateTime!'00000000'}"/>
               </effectiveTime>
               <targetSiteCode code="${operationCareRecord.operativeSiteName!'NA'}" codeSystem="2.16.156.10011.2.3.1.266" codeSystemName="手术目标部位编码" displayName="${operationCareRecord.operativeSiteName!'NA'}"/>
               <performer>
@@ -447,8 +447,8 @@
                 <organizer classCode="BATTERY" moodCode="EVN">
                   <statusCode/>
                   <effectiveTime>
-                    <low value="${operationCareRecord.enterRoomDatetime!'NA'}"/>
-                    <high value="${operationCareRecord.outRoomDatetime!'NA'}"/>
+                    <low value="${operationCareRecord.enterRoomDatetime!'00000000'}"/>
+                    <high value="${operationCareRecord.outRoomDatetime!'00000000'}"/>
                   </effectiveTime>
                 </organizer>
               </entryRelationship>
@@ -465,7 +465,7 @@
               <code code="DE06.00.206.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="病人交接核对项目"/>
               <value xsi:type="ST">${operationCareRecord.patientTransferCheckitem!'NA'}</value>
               <author>
-                <time value="${operationCareRecord.handoverDatetime!'NA'}"/>
+                <time value="${operationCareRecord.handoverDatetime!'00000000'}"/>
                 <assignedAuthor>
                   <id extension="NA" root="2.16.156.10011.1.4"/>
                   <code displayName="交接护士"/>

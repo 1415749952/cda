@@ -34,7 +34,7 @@
         <id extension="${cnInpatientMedicalRecord.identityNo!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${cnInpatientMedicalRecord.patientName!'NA'}</name>
         <administrativeGenderCode code="${cnInpatientMedicalRecord.sexCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${cnInpatientMedicalRecord.sexCode!'NA'}" datasetCloumn="SEX_CODE">${dict.desc}</@dict_tag>"/>
-        <birthTime value="${cnInpatientMedicalRecord.birthday!'NA'}"/>
+        <birthTime value="${cnInpatientMedicalRecord.birthday!'00000000'}"/>
         <maritalStatusCode code="${cnInpatientMedicalRecord.maritalStatusCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.5" codeSystemName="婚姻状况代码表(GB/T 2261.2)" displayName="<@dict_tag value="${cnInpatientMedicalRecord.maritalStatusCode!'NA'}" datasetCloumn="MARITAL_STATUS_CODE">${dict.desc}</@dict_tag>"/>
         <ethnicGroupCode code="${cnInpatientMedicalRecord.nation!'NA'}" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)" displayName="<@dict_tag value="${cnInpatientMedicalRecord.nation!'NA'}" datasetCloumn="NATION">${dict.desc}</@dict_tag>"/>
         <birthplace>
@@ -104,7 +104,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${cnInpatientMedicalRecord.inpDate!'NA'}"/>
+    <time value="${cnInpatientMedicalRecord.inpDate!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -239,8 +239,8 @@
     <encompassingEncounter classCode="ENC" moodCode="EVN">
       <code code="${cnInpatientMedicalRecord.inpApproach!'NA'}" codeSystem="2.16.156.10011.2.3.1.270" codeSystemName="入院途径代码表" displayName="<@dict_tag value="${cnInpatientMedicalRecord.inpApproach!'NA'}" datasetCloumn="INP_APPROACH">${dict.desc}</@dict_tag>"/>
       <effectiveTime>
-        <low value="${cnInpatientMedicalRecord.inpDate!'NA'}"/>
-        <high value="${cnInpatientMedicalRecord.dishospitalDate!'NA'}"/>
+        <low value="${cnInpatientMedicalRecord.inpDate!'00000000'}"/>
+        <high value="${cnInpatientMedicalRecord.dishospitalDate!'00000000'}"/>
       </effectiveTime>
       <location typeCode="LOC">
         <healthCareFacility classCode="SDLOC">
@@ -707,7 +707,7 @@
             <procedure classCode="PROC" moodCode="EVN">
               <code code="${cnInpatientMedicalRecord.operationCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.12" codeSystemName="手术(操作)代码表(ICD-9-CM)" displayName="${cnInpatientMedicalRecord.operationCode!'NA'}"/>
               <statusCode/>
-              <effectiveTime value="${cnInpatientMedicalRecord.operationStartDatetime!'NA'}"/>
+              <effectiveTime value="${cnInpatientMedicalRecord.operationStartDatetime!'00000000'}"/>
               <performer>
                 <assignedEntity>
                   <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -801,7 +801,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE09.00.103.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="病案质量"/>
-              <effectiveTime value="${cnInpatientMedicalRecord.qualitycontrolDate!'NA'}" xsi:type="IVL_TS"/>
+              <effectiveTime value="${cnInpatientMedicalRecord.qualitycontrolDate!'00000000'}" xsi:type="IVL_TS"/>
               <value code="${cnInpatientMedicalRecord.mrQualityCode!'NA'}" codeSystem="2.16.156.10011.2.3.2.29" codeSystemName="病案质量等级表" displayName="<@dict_tag value="${cnInpatientMedicalRecord.mrQualityCode!'NA'}" datasetCloumn="MR_QUALITY_CODE">${dict.desc}</@dict_tag>" xsi:type="CD"/>
               <author>
                 <time/>

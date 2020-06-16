@@ -32,7 +32,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${preciousConsumUsageRecord.signDatetime!'NA'}"/>
+    <time value="${preciousConsumUsageRecord.signDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <code displayName="护士"/>
@@ -50,7 +50,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${preciousConsumUsageRecord.signDatetime!'NA'}"/>
+    <time value="${preciousConsumUsageRecord.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>

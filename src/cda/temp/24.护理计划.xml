@@ -61,7 +61,7 @@
     </patientRole>
   </recordTarget>
   <author>
-    <time value="${carePlan.signDatetime!'NA'}"/>
+    <time value="${carePlan.signDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -78,7 +78,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator typeCode="AUTHEN">
-    <time value="${carePlan.signDatetime!'NA'}"/>
+    <time value="${carePlan.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>

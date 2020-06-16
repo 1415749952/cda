@@ -28,7 +28,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${deathRecord.signDatatime!'NA'}"/>
+    <time value="${deathRecord.signDatatime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -45,7 +45,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${deathRecord.signDatatime!'NA'}"/>
+    <time value="${deathRecord.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -56,7 +56,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${deathRecord.signDatatime!'NA'}"/>
+    <time value="${deathRecord.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -67,7 +67,7 @@
     </assignedEntity>
   </authenticator>
   <authenticator>
-    <time value="${deathRecord.signDatatime!'NA'}"/>
+    <time value="${deathRecord.signDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -170,7 +170,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE02.01.036.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="死亡日期时间"/>
-              <value value="${deathRecord.deathDatetime!'NA'}" xsi:type="TS"/>
+              <value value="${deathRecord.deathDatetime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
           <entry>

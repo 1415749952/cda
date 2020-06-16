@@ -30,7 +30,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${generalOperationRecords.signDatetime!'NA'}"/>
+    <time value="${generalOperationRecords.signDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -47,7 +47,7 @@
     </assignedCustodian>
   </custodian>
   <authenticator>
-    <time value="${generalOperationRecords.signDatetime!'NA'}"/>
+    <time value="${generalOperationRecords.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -66,7 +66,7 @@
   </relatedDocument>
   <componentOf>
     <encompassingEncounter>
-      <effectiveTime value="${generalOperationRecords.operationBeginDatetime!'NA'}"/>
+      <effectiveTime value="${generalOperationRecords.operationBeginDatetime!'00000000'}"/>
       <location>
         <healthCareFacility>
           <serviceProviderOrganization>
@@ -139,8 +139,8 @@
             <procedure classCode="PROC" moodCode="EVN">
               <code code="${generalOperationRecords.operationCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.12" codeSystemName="手术(操作)代码表(ICD-9-CM)" displayName="<@dict_tag value="${generalOperationRecords.operationCode!'NA'}" datasetCloumn="OPERATION_CODE">${dict.desc}</@dict_tag>"/>
               <effectiveTime>
-                <low value="${generalOperationRecords.operationBeginDatetime!'NA'}"/>
-                <high value="${generalOperationRecords.operatiionEndDatetime!'NA'}"/>
+                <low value="${generalOperationRecords.operationBeginDatetime!'00000000'}"/>
+                <high value="${generalOperationRecords.operatiionEndDatetime!'00000000'}"/>
               </effectiveTime>
               <performer typeCode="PRF">
                 <assignedEntity>

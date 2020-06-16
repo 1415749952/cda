@@ -37,7 +37,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${inspectionRecord.examinationRtDate!'NA'}"/>
+    <time value="${inspectionRecord.examinationRtDate!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="234234234" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -158,7 +158,7 @@
           <entry>
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.01.024.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="诊断代码"/>
-              <effectiveTime value="${inspectionRecord.diagnosisDate!'NA'}"/>
+              <effectiveTime value="${inspectionRecord.diagnosisDate!'00000000'}"/>
               <value code="${inspectionRecord.diagCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10" xsi:type="CD" displayName="<@dict_tag value="${inspectionRecord.diagCode!'NA'}" datasetCloumn="DIAG_CODE">${dict.desc}</@dict_tag>"/>
               <performer>
                 <assignedEntity>
@@ -192,8 +192,8 @@
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE04.01.117.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="症状描述"/>
               <effectiveTime>
-                <low value="${inspectionRecord.startSymptomsDate!'NA'}"/>
-                <high value="${inspectionRecord.stopSymptomsDate!'NA'}"/>
+                <low value="${inspectionRecord.startSymptomsDate!'00000000'}"/>
+                <high value="${inspectionRecord.stopSymptomsDate!'00000000'}"/>
               </effectiveTime>
               <value xsi:type="ST">${inspectionRecord.symptomDesc!'NA'}</value>
             </observation>
@@ -208,7 +208,7 @@
             <procedure classCode="PROC" moodCode="EVN">
               <code code="${inspectionRecord.opertorCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.12" codeSystemName="手术(操作)代码表(ICD-9-CM)" displayName="<@dict_tag value="${inspectionRecord.opertorCode!'NA'}" datasetCloumn="OPERTOR_CODE">${dict.desc}</@dict_tag>"/>
               <statusCode/>
-              <effectiveTime value="${inspectionRecord.operatorDate!'NA'}"/>
+              <effectiveTime value="${inspectionRecord.operatorDate!'00000000'}"/>
               <targetSiteCode code="${inspectionRecord.operationPositionCode!'NA'}" codeSystem="2.16.156.10011.2.3.1.266" codeSystemName="操作部位代码表" displayName="<@dict_tag value="${inspectionRecord.operationPositionCode!'NA'}" datasetCloumn="OPERATION_POSITION_CODE">${dict.desc}</@dict_tag>"/>
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">
@@ -294,14 +294,14 @@
               <component>
                 <observation classCode="OBS" moodCode="EVN">
                   <code code="DE04.30.019.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="检查项目代码"/>
-                  <effectiveTime value="${inspectionRecord.examinationDat!'NA'}"/>
+                  <effectiveTime value="${inspectionRecord.examinationDat!'00000000'}"/>
                   <value xsi:type="ST">${inspectionRecord.examinationItemCode!'NA'}</value>
                   <entryRelationship typeCode="COMP">
                     <observation classCode="OBS" moodCode="EVN">
                       <code code="DE04.30.019.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="标本类别"/>
                       <effectiveTime>
-                        <low value="${inspectionRecord.specimenSampleDate!'NA'}"/>
-                        <high value="${inspectionRecord.receiveSpecimenDate!'NA'}"/>
+                        <low value="${inspectionRecord.specimenSampleDate!'00000000'}"/>
+                        <high value="${inspectionRecord.receiveSpecimenDate!'00000000'}"/>
                       </effectiveTime>
                       <value xsi:type="ST">${inspectionRecord.sampleType!'NA'}</value>
                     </observation>

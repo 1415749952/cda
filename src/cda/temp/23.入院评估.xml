@@ -41,7 +41,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${admissionAssessment.signDatetime!'NA'}"/>
+    <time value="${admissionAssessment.signDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -58,7 +58,7 @@
     </assignedCustodian>
   </custodian>
   <legalAuthenticator typeCode="LA">
-    <time value="${admissionAssessment.signDatetime!'NA'}"/>
+    <time value="${admissionAssessment.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -69,7 +69,7 @@
     </assignedEntity>
   </legalAuthenticator>
   <authenticator>
-    <time value="${admissionAssessment.signDatetime!'NA'}"/>
+    <time value="${admissionAssessment.signDatetime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -445,7 +445,7 @@
               <entryRelationship typeCode="COMP">
                 <observation classCode="OBS" moodCode="EVN">
                   <code code="DE06.00.279.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="通知医师日期时间"/>
-                  <value value="${admissionAssessment.notifyPhysicianDatetime!'NA'}" xsi:type="TS"/>
+                  <value value="${admissionAssessment.notifyPhysicianDatetime!'00000000'}" xsi:type="TS"/>
                 </observation>
               </entryRelationship>
             </observation>
@@ -453,7 +453,7 @@
           <entry typeCode="COMP">
             <observation classCode="OBS" moodCode="EVN">
               <code code="DE05.10.144.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="评估日期时间"/>
-              <value value="${admissionAssessment.notifyPhysicianDatetime!'NA'}" xsi:type="TS"/>
+              <value value="${admissionAssessment.notifyPhysicianDatetime!'00000000'}" xsi:type="TS"/>
             </observation>
           </entry>
         </section>

@@ -19,7 +19,7 @@
         <id extension="${emrBasicpatient.identityNo!'NA'}" root="2.16.156.10011.1.3"/>
         <name>${firstCourseRecord.patientName!'NA'}</name>
         <administrativeGenderCode code="${firstCourseRecord.sexCode!'NA'}" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)" displayName="<@dict_tag value="${firstCourseRecord.sexCode!'NA'}" datasetCloumn="SEX_CODE">${dict.desc}</@dict_tag>"/>
-        <birthTime value="${emrBasicpatient.birthday!'NA'}"/>
+        <birthTime value="${emrBasicpatient.birthday!'00000000'}"/>
         <#if firstCourseRecord.ageYear??>
         <age unit="岁" value="${firstCourseRecord.ageYear!'NA'}"/>
         <#else>
@@ -29,7 +29,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${firstCourseRecord.recordDatatime!'NA'}"/>
+    <time value="${firstCourseRecord.recordDatatime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <assignedPerson>
@@ -46,7 +46,7 @@
     </assignedCustodian>
   </custodian>
   <legalAuthenticator>
-    <time value="${firstCourseRecord.recordDatatime!'NA'}"/>
+    <time value="${firstCourseRecord.recordDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>
@@ -57,7 +57,7 @@
     </assignedEntity>
   </legalAuthenticator>
   <authenticator>
-    <time value="${firstCourseRecord.recordDatatime!'NA'}"/>
+    <time value="${firstCourseRecord.recordDatatime!'00000000'}"/>
     <signatureCode/>
     <assignedEntity>
       <id extension="NA" root="2.16.156.10011.1.4"/>

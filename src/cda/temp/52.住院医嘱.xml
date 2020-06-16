@@ -33,7 +33,7 @@
     </patientRole>
   </recordTarget>
   <author contextControlCode="OP" typeCode="AUT">
-    <time value="${hospitalizationOrder.adviceOpenDatetime!'NA'}"/>
+    <time value="${hospitalizationOrder.adviceOpenDatetime!'00000000'}"/>
     <assignedAuthor classCode="ASSIGNED">
       <id extension="NA" root="2.16.156.10011.1.7"/>
       <code displayName="医嘱开立者"/>
@@ -61,7 +61,7 @@
     <encompassingEncounter classCode="ENC" moodCode="EVN">
       <code/>
       <effectiveTime>
-        <low value="${hospitalizationOrder.adviceplanStartDatetime!'NA'}"/>
+        <low value="${hospitalizationOrder.adviceplanStartDatetime!'00000000'}"/>
       </effectiveTime>
       <location typeCode="LOC">
         <healthCareFacility classCode="SDLOC">
@@ -132,12 +132,12 @@
                 <observation classCode="OBS" moodCode="EVN">
                   <code code="DE06.00.288.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="医嘱项目内容"/>
                   <effectiveTime>
-                    <low value="${hospitalizationOrder.adviceplanStartDatetime!'NA'}"/>
-                    <high value="${hospitalizationOrder.adviceplanEndDatetime!'NA'}"/>
+                    <low value="${hospitalizationOrder.adviceplanStartDatetime!'00000000'}"/>
+                    <high value="${hospitalizationOrder.adviceplanEndDatetime!'00000000'}"/>
                   </effectiveTime>
                   <value xsi:type="ST">${hospitalizationOrder.adviceItemContent!'NA'}</value>
                   <author>
-                    <time value="${hospitalizationOrder.adviceOpenDatetime!'NA'}"/>
+                    <time value="${hospitalizationOrder.adviceOpenDatetime!'00000000'}"/>
                     <assignedAuthor>
                       <id extension="NA" root="2.16.156.10011.1.4"/>
                       <code displayName="医嘱开立者"/>
@@ -150,7 +150,7 @@
                     </assignedAuthor>
                   </author>
                   <participant typeCode="ATND">
-                    <time value="${hospitalizationOrder.checkAdviceDatetime!'NA'}"/>
+                    <time value="${hospitalizationOrder.checkAdviceDatetime!'00000000'}"/>
                     <participantRole classCode="ASSIGNED">
                       <id extension="NA" root="2.16.156.10011.1.4"/>
                       <code displayName="医嘱审核人"/>
@@ -160,7 +160,7 @@
                     </participantRole>
                   </participant>
                   <participant typeCode="ATND">
-                    <time value="${hospitalizationOrder.adviceCheckDatetime!'NA'}"/>
+                    <time value="${hospitalizationOrder.adviceCheckDatetime!'00000000'}"/>
                     <participantRole classCode="ASSIGNED">
                       <id extension="NA" root="2.16.156.10011.1.4"/>
                       <code displayName="医嘱核对人"/>
@@ -170,7 +170,7 @@
                     </participantRole>
                   </participant>
                   <participant typeCode="ATND">
-                    <time value="${hospitalizationOrder.adviceEndDatetime!'NA'}"/>
+                    <time value="${hospitalizationOrder.adviceEndDatetime!'00000000'}"/>
                     <participantRole classCode="ASSIGNED">
                       <id extension="NA" root="2.16.156.10011.1.4"/>
                       <code displayName="医嘱停止人"/>
@@ -180,7 +180,7 @@
                     </participantRole>
                   </participant>
                   <participant typeCode="ATND">
-                    <time value="${hospitalizationOrder.cancelAdviceDatetime!'NA'}"/>
+                    <time value="${hospitalizationOrder.cancelAdviceDatetime!'00000000'}"/>
                     <participantRole classCode="ASSIGNED">
                       <id extension="NA" root="2.16.156.10011.1.4"/>
                       <code displayName="医嘱取消人"/>
@@ -200,7 +200,7 @@
                       <code code="DE06.00.290.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="医嘱执行状态"/>
                       <value xsi:type="ST">${hospitalizationOrder.adviceExecStatus!'NA'}</value>
                       <performer>
-                        <time value="${hospitalizationOrder.adviceExecDatetime!'NA'}"/>
+                        <time value="${hospitalizationOrder.adviceExecDatetime!'00000000'}"/>
                         <assignedEntity>
                           <id extension="NA" root="2.16.156.10011.1.4"/>
                           <code displayName="医嘱执行者"/>
